@@ -1,0 +1,117 @@
+@import "https://fonts.googleapis.com/css?family=Muli";
+body {
+  background-color: #071013;
+  color: white;
+  font-family: 'Muli', sans-serif; }
+
+.gamefield {
+  max-width: 480px;
+  margin: 20px auto; }
+
+.align {
+  display: flex;
+  justify-content: center; }
+
+.game-row, #red, #yellow, #blue, #green, .large-circle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px auto; }
+
+.gamebutton {
+  background-color: transparent;
+  /*-moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  width:100px;*/
+  animation-duration: 0.4s; }
+
+#red {
+  width: 150px;
+  height: 150px;
+  background: red;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  border-top-left-radius: 20%;
+  margin-left: 30px;
+  margin-bottom: 0px; }
+
+#yellow {
+  width: 150px;
+  height: 150px;
+  background: yellow;
+  border-bottom-left-radius: 100%;
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
+  border-top-left-radius: 20%;
+  margin-right: 30px;
+  margin-top: 0px; }
+
+#blue {
+  width: 150px;
+  height: 150px;
+  background: blue;
+  border-bottom-right-radius: 100%;
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  margin-left: 30px;
+  margin-top: 0px; }
+
+#green {
+  width: 150px;
+  height: 150px;
+  background: green;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  margin-right: 30px;
+  margin-bottom: 0px; }
+
+.clickNumber {
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px; }
+
+#red.hover {
+  border: 6px solid red; }
+
+#yellow.hover {
+  border: 6px solid red; }
+
+#blue.hover {
+  border: 6px solid red; }
+
+#green.hover {
+  border: 6px solid red; }
+
+.btn-sett {
+  font-size: 2.7em;
+  text-align: left;
+  transition: 500ms;
+  width: 70px;
+  margin-right: 340px; }
+  .btn-sett:hover {
+    color: #29BF12; }
+
+.modal-title {
+  color: black; }
+
+.black {
+  color: #071013;
+  text-align: center; }
+
+.large-circle {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 15px solid rgba(0, 0, 0, 0.3);
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%; }
+
+.clickButton {
+  filter: brightness(50%); }
+
+/*# sourceMappingURL=main.css.map */

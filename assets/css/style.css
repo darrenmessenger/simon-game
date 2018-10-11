@@ -1,0 +1,270 @@
+
+.bg {
+    height: 100vh;
+     background: url("../images/memorizing.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /*filter: blur(5px);*/
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+   
+}
+
+.navbar {
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .25);
+    border: 0;
+    font:white;
+}
+
+.navbar-default .navbar-nav>li>a {
+   
+    background-color: rgba(0, 0, 0, .0);
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-text {
+    color: white;
+}
+
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    background: #ff0000;
+    color: #000000;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: white;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+    border: 0;
+}
+
+.navbar-default .navbar-toggle:hover {
+    
+    background: #ff0000;
+    color: #000000;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: white;
+}
+
+
+
+.navbar-default .navbar-nav a {
+    font-weight: bold;
+}
+
+
+
+
+.navbar-btn {
+    border: 0;
+    border-radius: 16px;
+    width: 100px;
+    background-color: #f05f40;
+    color: white;
+}
+
+
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+
+.footer {
+    background-color: #4e5660;
+    color: white;
+    padding: 40px 0 30px 0;
+}
+
+.footer ul li a {
+    color: white;
+    font-weight: 400;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+
+b, strong {
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.footer_menu-title {
+    font-weight: 600;
+    font-size: 1.6em;
+    color: white;
+    text-align: center;
+}
+
+
+.footer ul li a:hover {
+    color: #1397cc;
+    text-decoration: none;
+}
+
+
+/* Features */
+
+footer {
+    text-align: center;
+   /* margin-bottom: 20px;*/
+}
+
+.feature .glyphicon {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.feature .btn {
+    background-color: white;
+    border-color: white;
+    border-radius: 15px;
+    min-width: 100px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f05f40;
+}
+
+/* Containers */
+
+
+.container-wrapper--red {
+    background-color: #f05f40;
+    color: white;
+}
+
+.container{
+    margin-top: 80px;
+}
+
+/* Block dividers */
+
+.block-divider {
+    width: 75px;
+    height: 3px;
+    border: 0;
+    background-color: #444;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.block-divider--orange {
+    background-color: #f05f40;
+}
+
+.block-divider--white {
+    background-color: white;
+}
+
+.block-divider--short {
+    width: 35px;
+}
+
+/* Page Headers */
+
+.page-header {
+    margin-bottom: 0;
+    border-bottom: 0;
+    text-align: center;
+}
+
+.page-header h2 {
+    margin-top: 0;
+}
+
+.footer-social .social-links li a i {
+    /*width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #ffffff;
+    background: #808080;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;*/
+    
+    width: 40px;
+    height: 40px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #808080;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    
+}
+
+.footer-social .social-links li a i:hover {
+    background: #ff0000;
+    color: #000000;
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+}
+
