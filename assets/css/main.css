@@ -1,8 +1,10 @@
-@import "https://fonts.googleapis.com/css?family=Muli";
+@import url("https://fonts.googleapis.com/css?family=Play:100,200,300,400,500,600,700");
 body {
   background-color: #071013;
   color: white;
-  font-family: 'Muli', sans-serif; }
+  font-family: 'Play', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden; }
 
 .gamefield {
   max-width: 480px;
@@ -12,67 +14,78 @@ body {
   display: flex;
   justify-content: center; }
 
-.game-row, #red, #yellow, #blue, #green, .large-circle {
+.row {
+  text-align: center; }
+
+.game-row, #red, #yellow, #blue, #green, #clickNumber, .large-circle, #startReset {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 15px auto; }
+  margin: 5px auto; }
 
 .gamebutton {
   background-color: transparent;
   /*-moz-border-radius:50%;
-  -webkit-border-radius:50%;
-  width:100px;*/
-  animation-duration: 0.4s; }
+    -webkit-border-radius:50%;
+    width:100px;*/
+  animation-duration: 0.3s; }
 
 #red {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: red;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
   border-top-left-radius: 20%;
-  margin-left: 30px;
-  margin-bottom: 0px; }
+  margin-left: 20px;
+  margin-bottom: 5px; }
 
 #yellow {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: yellow;
   border-bottom-left-radius: 100%;
   border-top-right-radius: 20%;
   border-bottom-right-radius: 20%;
   border-top-left-radius: 20%;
-  margin-right: 30px;
-  margin-top: 0px; }
+  margin-right: 20px;
+  margin-top: 5px; }
 
 #blue {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: blue;
   border-bottom-right-radius: 100%;
   border-top-right-radius: 20%;
   border-top-left-radius: 20%;
   border-bottom-left-radius: 20%;
-  margin-left: 30px;
-  margin-top: 0px; }
+  margin-left: 20px;
+  margin-top: 5px; }
 
 #green {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: green;
   border-top-left-radius: 100%;
   border-top-right-radius: 20%;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
-  margin-right: 30px;
-  margin-bottom: 0px; }
+  margin-right: 20px;
+  margin-bottom: 5px; }
 
-.clickNumber {
+#clickNumber {
   text-align: center;
   font-weight: 700;
-  font-size: 35px; }
+  font-size: 30px;
+  margin-right: 110px;
+  padding-right: 5px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 25px;
+  animation-duration: 0.4s;
+  color: white; }
 
 #red.hover {
   border: 6px solid red; }
@@ -86,15 +99,6 @@ body {
 #green.hover {
   border: 6px solid red; }
 
-.btn-sett {
-  font-size: 2.7em;
-  text-align: left;
-  transition: 500ms;
-  width: 70px;
-  margin-right: 340px; }
-  .btn-sett:hover {
-    color: #29BF12; }
-
 .modal-title {
   color: black; }
 
@@ -104,14 +108,65 @@ body {
 
 .large-circle {
   background-color: rgba(0, 0, 0, 0.5);
-  border: 15px solid rgba(0, 0, 0, 0.3);
-  height: 500px;
-  width: 500px;
+  border: 15px solid rgba(0, 0, 0, 0.1);
+  height: 320px;
+  width: 320px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%; }
 
 .clickButton {
   filter: brightness(50%); }
+
+#information {
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-duration: 2s;
+  display: inline-block;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 20px;
+  background: rgba(255, 0, 0, 0.7);
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  text-align: center; }
+
+#startReset {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 15px;
+  width: 85px;
+  font-size: 0.9em;
+  font-weight: 600; }
+
+.button {
+  display: inline-block;
+  padding: 5px 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.7);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px rgba(255, 0, 0, 0.5); }
+
+.button:hover {
+  /* background-color: rgba(255, 0, 0, 0.3)*/
+  background: #ff0000;
+  color: #000000;
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out; }
+
+.button:active {
+  background-color: rgba(255, 0, 0, 0.9);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px); }
+
+.about {
+  background-color: white; }
 
 /*# sourceMappingURL=main.css.map */

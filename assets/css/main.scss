@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Play:100,200,300,400,500,600,700');
+
+
+
+
 $rich-black: #071013;
 $kelly-green: #29BF12;
 $blue: blue;
@@ -7,13 +12,15 @@ $green: green;
 $buttonWidth: 90px;
 $color: red;
 
-@import 'https://fonts.googleapis.com/css?family=Muli';
 
 body {
-  background-color:$rich-black;
+  background-color: $rich-black;
   color: white;
-  font-family: 'Muli', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-size:16px;
+  overflow-x:hidden;
 }
+
 
 .gamefield {
   max-width: 480px;
@@ -25,20 +32,23 @@ body {
   justify-content: center;
 }
 
+.row {
+  text-align: center;
+}
+
 .game-row {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 15px auto;
+  margin: 5px auto;
 }
 
 .gamebutton {
   background-color: transparent;
-    /*-moz-border-radius:50%;
+  /*-moz-border-radius:50%;
     -webkit-border-radius:50%;
     width:100px;*/
-    animation-duration: 0.4s;
-
+  animation-duration: 0.3s;
 }
 
 
@@ -46,7 +56,7 @@ body {
 @mixin border($color) {
   border: 4px solid $color;
   margin: 20px;
- &:active {
+  &:active {
     // DO NOT USE HOVER  (better mobile performance)
     background-color: $color;
   }
@@ -58,87 +68,88 @@ body {
 
 #red {
   @extend .game-row;
-  width: 150px;
-  height: 150px;
-  background:red;
+  width: 100px;
+  height: 100px;
+  background: red;
   border-top-right-radius: 100%;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
   border-top-left-radius: 20%;
-  margin-left: 30px;
-  margin-bottom: 0px;
+  margin-left: 20px;
+  margin-bottom: 5px;
 }
 
 #yellow {
   @extend .game-row;
-  width: 150px; 
-  height: 150px;
-  background:yellow;
+  width: 100px;
+  height: 100px;
+  background: yellow;
   border-bottom-left-radius: 100%;
   border-top-right-radius: 20%;
   border-bottom-right-radius: 20%;
   border-top-left-radius: 20%;
-  margin-right: 30px;
-  margin-top: 0px;
+  margin-right: 20px;
+  margin-top: 5px;
 }
 
 #blue {
   @extend .game-row;
-  width: 150px;
-  height: 150px;
-  background:blue;
+  width: 100px;
+  height: 100px;
+  background: blue;
   border-bottom-right-radius: 100%;
   border-top-right-radius: 20%;
   border-top-left-radius: 20%;
   border-bottom-left-radius: 20%;
-  margin-left: 30px;
-  margin-top: 0px;
+  margin-left: 20px;
+  margin-top: 5px;
 }
 
 #green {
- @extend .game-row;
-  width: 150px;
-  height: 150px;
-  background:green;
+  @extend .game-row;
+  width: 100px;
+  height: 100px;
+  background: green;
   border-top-left-radius: 100%;
   border-top-right-radius: 20%;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
-  margin-right: 30px;
-  margin-bottom: 0px;
+  margin-right: 20px;
+  margin-bottom: 5px;
 }
 
-.clickNumber{
-  text-align:center;
+
+
+#clickNumber {
+  @extend .game-row;
+
+  text-align: center;
   font-weight: 700;
-  font-size: 35px;
+  font-size: 30px;
+  margin-right: 110px;
+  padding-right: 5px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 25px;
+  animation-duration: 0.4s;
+  color: white;
 }
 
 #red.hover {
-  border:6px solid $red;  
+  border: 6px solid $red;
 }
 
 #yellow.hover {
-  border:6px solid $red;  
+  border: 6px solid $red;
 }
 
 #blue.hover {
-  border:6px solid $red;  
+  border: 6px solid $red;
 }
 
 #green.hover {
-  border:6px solid $red;  
-}
-  
-.btn-sett {
-  font-size: 2.7em;
-  text-align: left;
-  transition: 500ms;
-  width: 70px;
-  margin-right: 340px;
-  &:hover {
-    color:  $kelly-green;
-  }
+  border: 6px solid $red;
 }
 
 .modal-title {
@@ -153,19 +164,78 @@ body {
 
 
 
-.large-circle{
-   @extend .game-row;
-    background-color:  rgba(0, 0, 0, 0.5);
-    border:15px solid  rgba(0, 0, 0, 0.3);   
-    height:500px;
-    width:500px;
-    border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    
+.large-circle {
+  @extend .game-row;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 15px solid rgba(0, 0, 0, 0.1);
+  height: 320px;
+  width: 320px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+
 }
 
-.clickButton{
+.clickButton {
   filter: brightness(50%);
 }
 
+#information {
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-duration: 2s;
+  display: inline-block;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 20px;
+  background: rgba(255, 0, 0, 0.7);
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  text-align: center;
+}
+
+#startReset {
+  @extend .game-row;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 15px;
+  width: 85px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.button {
+  display: inline-block;
+  padding: 5px 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.7);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px rgba(255, 0, 0, 0.5);
+}
+
+.button:hover {
+ /* background-color: rgba(255, 0, 0, 0.3)*/
+ background: #ff0000;
+    color: #000000;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+
+;
+
+.button:active {
+  background-color: rgba(255, 0, 0, 0.9);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.about{
+  background-color:white;
+}

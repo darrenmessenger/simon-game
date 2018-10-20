@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Play:100,200,300,400,500,600,700');
+
+body {
+  font-family: 'Play', sans-serif;
+  font-size:16px;
+}
 
 .bg {
     height: 100vh;
@@ -10,6 +16,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    width:100%;
     /*filter: blur(5px);*/
 }
 
@@ -136,7 +143,6 @@ b, strong {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
     color: inherit;
@@ -155,6 +161,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     text-decoration: none;
 }
 
+
+.copyright{
+    font-size: 0.8em;
+}
 
 /* Features */
 

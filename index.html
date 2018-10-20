@@ -22,6 +22,9 @@
 <body class="body">
   <div class="bg">
     <div class="opaque-overlay" </div>
+      
+      <!------------Navigation Bar---------->
+
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -46,29 +49,32 @@
           </div>
         </div>
       </nav>
+      
       <!------------Game------------>
+      
       <div class="container ">
+
         <div class="row ">
           <div class="col-md-12 ">
-            <h2 class="text-center ">Simple Simon Game</h2>
+            <h2 id="information">Press Start/Reset to begin...</h2>
           </div>
         </div>
         <div class="row ">
           <div class="large-circle">
             <div class="col-md-12 ">
               <div class="game-row">
-                <div id="green" class="gamebutton"></div>
-                <div id="red" class="gamebutton"></div>
+                <div id="green" class="gamebutton" onClick="playerClicked(this.id)"></div>
+                <div id="red" class="gamebutton" onClick="playerClicked(this.id)"></div>
               </div>
-               <div id="gameNumber ">
-                  <h2 class=" clickNumber animated jackInTheBox ">1</h2>
-                </div>
               <div class="game-row">
-                <div id="yellow" class="gamebutton"></div>
-               
-                <div id="blue" class="gamebutton"></div>
+                <button id="startReset" class="button" onclick="resetGamePressed()">Start/Reset</button>
+                <h2 id="clickNumber">0</h2>
+                
               </div>
-              
+              <div class="game-row">
+                <div id="yellow" class="gamebutton" onClick="playerClicked(this.id)"></div>
+                <div id="blue" class="gamebutton" onClick="playerClicked(this.id)"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -76,29 +82,29 @@
 
 
 
-  <!------------Footer---------->
+      <!------------Footer---------->
 
-  <footer id="footer" class="footer">
-    <div class="footer-container">
-      <div class="footer-social">
-        <ul class="list-inline social-links">
-          <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/darren-messenger-a4a59951" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-          <li><a href="https://github.com/darrenmessenger" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a href="https://www.youtube.com/watch?v=1Yqj76Q4jJ4" target="_blank"><i class="fab fa-youtube"></i></a></li>
-          <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-      </div>
-      <div>
-        © 2018 Copyright:
-        <a href="index.html ">darrenmessenger</a>
-      </div>
-    </div>
-  </footer>
+      <footer id="footer" class="footer">
+        <div class="footer-container">
+          <div class="footer-social">
+            <ul class="list-inline social-links">
+              <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/darren-messenger-a4a59951" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://github.com/darrenmessenger" target="_blank"><i class="fab fa-github"></i></a></li>
+              <li><a href="https://www.youtube.com/watch?v=1Yqj76Q4jJ4" target="_blank"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <div class="copyright">
+            © 2018 Copyright:
+            <a href="index.html ">darrenmessenger</a>
+          </div>
+        </div>
+      </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
-    <script type="text/javascript" src="assets/js/script.js"></script> 
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+      <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>

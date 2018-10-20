@@ -12,26 +12,32 @@ var game = {
   strict: false,
 }
 
+
+function newGame() {
+  clearGame();
+}
+
 function clearGame() {
   game.currentGame = [];
   game.count = 0;
   addCount();
 }
 
-function newGame() {
-  clearGame();
+function addCount() {
+  game.count++;
+  $('#clickNumber').addClass('animated fadeOutDown');
+  
+  setTimeout(function(){
+    $('#clickNumber').removeClass('fadeOutDown').html(game.count).addClass('fadeInDown');
+  }, 200);
+  
+  generateMove();
 }
 
-function strict() {
-  if (game.strict == false) {
-    game.strict = true;
-    $('#strict').html('Is currently On').removeClass('btn-primary').addClass('btn-danger');
-  } else {
-    game.strict = false;
-    $('#strict').html('Is currently Off').removeClass('btn-danger').addClass('btn-primary');
-  }
-  
-  newGame();
+function generateMove(){
+  game.currentGame.push(game.possibilities[(Math.floor(Math.random()*4))]);
+  //alert(game.currentGame.length);
+  showMoves();
 }
 
 function showMoves() {
@@ -46,6 +52,32 @@ function showMoves() {
   
   clearPlayer();
 }
+
+function playGame(field) {
+  $(field).addClass('hover');
+  sound(field);
+  setTimeout(function(){
+      $(field).removeClass('hover');
+  }, 300);
+}
+
+function clearPlayer() {
+  game.player = [];
+}
+
+function strict() {
+  if (game.strict == false) {
+    game.strict = true;
+    $('#strict').html('Is currently On').removeClass('btn-primary').addClass('btn-danger');
+  } else {
+    game.strict = false;
+    $('#strict').html('Is currently Off').removeClass('btn-danger').addClass('btn-primary');
+  }
+  
+  newGame();
+}
+
+
 
 function sound(name) {
   switch(name) {
@@ -64,17 +96,8 @@ function sound(name) {
   };
 }
 
-function playGame(field) {
-  $(field).addClass('hover');
-  sound(field);
-  setTimeout(function(){
-      $(field).removeClass('hover');
-  }, 300);
-}
 
-function clearPlayer() {
-  game.player = [];
-}
+
 
 function addToPlayer(id) {
   var field = "#"+id
@@ -111,21 +134,8 @@ function nextLevel() {
   addCount();
 }
 
-function generateMove(){
-  game.currentGame.push(game.possibilities[(Math.floor(Math.random()*4))]);
-  //alert(game.currentGame.length);
-  showMoves();
-}
 
-function addCount() {
-  game.count++;
-  $('#clickNumber').addClass('animated fadeOutDown');
-  
-  setTimeout(function(){
-    $('#clickNumber').removeClass('fadeOutDown').html(game.count).addClass('fadeInDown');
-  }, 200);
-  
-  generateMove();
-}
+
+
 
 newGame();
