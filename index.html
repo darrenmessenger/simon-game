@@ -16,95 +16,148 @@
 
 
 
-
 <!------------Body---------->
 
 <body class="body">
+  <!--<div class="main-container">-->
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="index.html" class="navbar-brand">Simon Memory Game</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+      </div>
+
+      <div class="navbar-collapse collapse" id="navbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#contact">About</a></li>
+        </ul>
+
+        <div class="navbar-header navbar-right hidden-xs">
+          <p class="navbar-text"><i>'Simon' Game To Test Your Memory</i></p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <!------------About------------>
   <div class="bg">
-    <div class="opaque-overlay" </div>
-      
-      <!------------Navigation Bar---------->
-
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a href="index.html" class="navbar-brand">Simon Memory Game</a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
+    <div class="opaque-overlay-blue"></div>
+    <div class="container-fluid main-container">
+      <div class="row">
+        <!-- <div class="col-md-1"></div>-->
+        <div class="col-xs-offset-1 col-xs-10 col-md-4">
+          <!--        <div class="bg">
+-->
+          <div class="about">
+            <h2>About 'Simon' Game</h2>
+            <p>From Wikipedia, the free encyclopedia</p>
+            <p>Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison,[1] with software programming by Lenny Cope. The device creates a series of tones and lights and requires a user to repeat the sequence. If the user
+              succeeds, the series becomes progressively longer and more complex. Once the user fails or the time limit runs out, the game is over. </p>
+            <a href="https://en.wikipedia.org/wiki/Simon_(game)" target="_blank">
+              <p class="read-more">Read more...</p>
+            </a>
           </div>
+        </div>
+        <!------------Game------------>
 
-          <div class="navbar-collapse collapse" id="navbar">
-            <ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="index.html">About</a></li>
-            </ul>
+        <div class="col-sm-12 col-md-6">
 
-            <div class="navbar-header navbar-right hidden-xs">
-              <p class="navbar-text"><i>'Simon' Game To Test Your Memory</i></p>
+          <div class="row ">
+            <div col-xs-12>
+              <h2 id="information">Press Start/Reset to begin...</h2>
             </div>
           </div>
-        </div>
-      </nav>
-      
-      <!------------Game------------>
-      
-      <div class="container ">
+          <div class="row ">
+            <div class="large-circle ">
+              <div>
+                <div class="game-row">
+                  <div id="green" class="gamebutton" onClick="playerClicked(this.id)"></div>
+                  <div id="red" class="gamebutton" onClick="playerClicked(this.id)"></div>
+                </div>
+                <div class="game-row">
+                  <button id="startReset" class="button" onclick="resetGamePressed()">Start/Reset</button>
+                  <h2 id="clickNumber">0</h2>
 
-        <div class="row ">
-          <div class="col-md-12 ">
-            <h2 id="information">Press Start/Reset to begin...</h2>
-          </div>
-        </div>
-        <div class="row ">
-          <div class="large-circle">
-            <div class="col-md-12 ">
-              <div class="game-row">
-                <div id="green" class="gamebutton" onClick="playerClicked(this.id)"></div>
-                <div id="red" class="gamebutton" onClick="playerClicked(this.id)"></div>
-              </div>
-              <div class="game-row">
-                <button id="startReset" class="button" onclick="resetGamePressed()">Start/Reset</button>
-                <h2 id="clickNumber">0</h2>
-                
-              </div>
-              <div class="game-row">
-                <div id="yellow" class="gamebutton" onClick="playerClicked(this.id)"></div>
-                <div id="blue" class="gamebutton" onClick="playerClicked(this.id)"></div>
+                </div>
+                <div class="game-row">
+                  <div id="yellow" class="gamebutton" onClick="playerClicked(this.id)"></div>
+                  <div id="blue" class="gamebutton" onClick="playerClicked(this.id)"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!--<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-3">
+        <div class="demo-content">.col-sm-3 .col-md-2</div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="demo-content bg-alt">.col-sm-9 .col-md-8</div>
+      </div>
+
+    </div>
+  </div>-->
 
 
+  <!------------Contact Me------------>
+  <div class="bg">
+    <div class="opaque-overlay-yellow"></div>
+    <div class="container-fluid contact">
 
-      <!------------Footer---------->
-
-      <footer id="footer" class="footer">
-        <div class="footer-container">
-          <div class="footer-social">
-            <ul class="list-inline social-links">
-              <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/darren-messenger-a4a59951" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-              <li><a href="https://github.com/darrenmessenger" target="_blank"><i class="fab fa-github"></i></a></li>
-              <li><a href="https://www.youtube.com/watch?v=1Yqj76Q4jJ4" target="_blank"><i class="fab fa-youtube"></i></a></li>
-              <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-          </div>
-          <div class="copyright">
-            © 2018 Copyright:
-            <a href="index.html ">darrenmessenger</a>
-          </div>
+      <div id="contact" class="row">
+        <div class="col-xs-12">
+          <h2>Contact Me...</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima obcaecati earum consequatur mollitia omnis corporis provident, cumque ipsum quo minus aliquid eaque dolore voluptatem in illum, hic, eos ea. Facilis.</p>
+          <p>Facere corporis ratione natus, beatae eius temporibus ipsa perferendis velit inventore pariatur qui iste debitis, similique iusto omnis quae commodi. Vitae accusantium ducimus fugiat numquam nulla accusamus, nostrum aperiam blanditiis?</p>
+          <p>Culpa saepe odit officiis accusamus aperiam voluptates recusandae alias provident, ducimus adipisci quibusdam reiciendis autem similique porro nihil tempora modi blanditiis animi aspernatur impedit pariatur. Iste, commodi soluta quos nostrum!</p>
+          <p>Animi rem quam ab reiciendis officiis vero id soluta placeat rerum fugiat! Dolorem ullam reprehenderit ipsam ad doloremque esse, accusamus nulla eius magnam quaerat dolore incidunt tempore, vel debitis illo?</p>
         </div>
-      </footer>
+      </div>
+    </div>
+  </div>
 
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
-      <script type="text/javascript" src="assets/js/script.js"></script>
+
+
+  <!------------Footer---------->
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-social">
+        <ul class="list-inline social-links">
+          <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/darren-messenger-a4a59951" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://github.com/darrenmessenger" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.youtube.com/watch?v=1Yqj76Q4jJ4" target="_blank"><i class="fab fa-youtube"></i></a></li>
+          <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        © 2018 Copyright:
+        <a href="index.html ">darrenmessenger</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Play:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700');
 
 
 
@@ -12,25 +12,6 @@ $green: green;
 $buttonWidth: 90px;
 $color: red;
 
-
-body {
-  background-color: $rich-black;
-  color: white;
-  font-family: 'Play', sans-serif;
-  font-size:16px;
-  overflow-x:hidden;
-}
-
-
-.gamefield {
-  max-width: 480px;
-  margin: 20px auto;
-}
-
-.align {
-  display: flex;
-  justify-content: center;
-}
 
 .row {
   text-align: center;
@@ -62,9 +43,6 @@ body {
   }
 }
 
-@mixin onhover($color) {
-  background-color: $color;
-}
 
 #red {
   @extend .game-row;
@@ -77,6 +55,9 @@ body {
   border-top-left-radius: 20%;
   margin-left: 20px;
   margin-bottom: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color:white;
 }
 
 #yellow {
@@ -90,6 +71,9 @@ body {
   border-top-left-radius: 20%;
   margin-right: 20px;
   margin-top: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color:white;
 }
 
 #blue {
@@ -103,6 +87,9 @@ body {
   border-bottom-left-radius: 20%;
   margin-left: 20px;
   margin-top: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color:white;
 }
 
 #green {
@@ -116,6 +103,9 @@ body {
   border-bottom-right-radius: 20%;
   margin-right: 20px;
   margin-bottom: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color:white;
 }
 
 
@@ -124,7 +114,7 @@ body {
   @extend .game-row;
 
   text-align: center;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 30px;
   margin-right: 110px;
   padding-right: 5px;
@@ -136,44 +126,23 @@ body {
   color: white;
 }
 
-#red.hover {
-  border: 6px solid $red;
-}
-
-#yellow.hover {
-  border: 6px solid $red;
-}
-
-#blue.hover {
-  border: 6px solid $red;
-}
-
-#green.hover {
-  border: 6px solid $red;
-}
-
-.modal-title {
-  color: black;
-}
-
-.black {
-  color: $rich-black;
-  text-align: center;
-}
 
 
 
 
 .large-circle {
   @extend .game-row;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   border: 15px solid rgba(0, 0, 0, 0.1);
   height: 320px;
   width: 320px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-
+  text-align:center;
+border-style: solid;
+  border-width: 3px;
+  border-color:white;
 }
 
 .clickButton {
@@ -181,16 +150,20 @@ body {
 }
 
 #information {
-  font-weight: 600;
+  font-weight: 500;
   background-color: rgba(0, 0, 0, 0.5);
   animation-duration: 2s;
   display: inline-block;
   color: white;
   font-size: 1.2em;
   border-radius: 20px;
-  background: rgba(255, 0, 0, 0.7);
+  background: rgba(255, 0, 0, 0.9);
   padding: 0.3em 0.5em 0.3em 0.5em;
   text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  border-color:white;
+  margin-top:50px;
 }
 
 #startReset {
@@ -200,32 +173,35 @@ body {
   margin-right: 10px;
   margin-left: 15px;
   width: 85px;
-  font-size: 0.9em;
-  font-weight: 600;
+  /*font-size: 0.9em;*/
+  font-weight: 400;
 }
 
 .button {
   display: inline-block;
-  padding: 5px 5px;
+  padding: 0px 0px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: white;
-  background-color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(255, 0, 0, 0.9);
   border: none;
   border-radius: 15px;
-  box-shadow: 0 6px rgba(255, 0, 0, 0.5);
+  box-shadow: 0 6px darkred;
+  border-style: solid;
+  border-width: 1px;
+  border-color:white;
 }
 
 .button:hover {
  /* background-color: rgba(255, 0, 0, 0.3)*/
  background: #ff0000;
     color: #000000;
-    transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
 }
 
 ;
@@ -236,6 +212,3 @@ body {
   transform: translateY(4px);
 }
 
-.about{
-  background-color:white;
-}
