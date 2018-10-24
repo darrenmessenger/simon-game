@@ -9,7 +9,7 @@
 }
 
 
-.about {
+#about {
    position:relative;
    padding:30px 0px 0px 0px;
    background-color: transparent;
@@ -68,7 +68,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 0, 0.6);
+    background-color: rgba(255, 255, 0, 0.8);
    
 }
 
@@ -99,7 +99,7 @@
     left: 0;
     width: 100%;
    /* z-index: 100;*/
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.9);
     border: 0;
     font:white;
 }
@@ -207,9 +207,10 @@ footer {
     background-color: #f05f40;
     color: white;
 }
+
 #game{
-    margin-top: 80px;
-    margin-bottom: 80px;
+    /*margin-top: 80px;
+    margin-bottom: 80px;*/
 }
 
 
@@ -263,7 +264,7 @@ footer {
 }
 
 footer{
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.8);
     color: white;
       width: 100%;
     padding-top: 40px;
@@ -299,3 +300,9 @@ footer{
     /*.row{
         margin-top: 50px;
     }*/
+    
+    .form-control {
+    margin-top: 15px;
+    color: black;
+    border-color: black;
+}

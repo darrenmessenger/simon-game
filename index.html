@@ -12,6 +12,12 @@
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("user_gqsmetIRnz8HskVK7nXeh");
+    })();
+  </script>
 </head>
 
 
@@ -36,7 +42,9 @@
       <div class="navbar-collapse collapse" id="navbar">
         <ul class="nav navbar-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#contact">About</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#game">Game</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
         <div class="navbar-header navbar-right hidden-xs">
@@ -58,7 +66,7 @@
         <div class="col-xs-offset-1 col-xs-10 col-md-4">
           <!--        <div class="bg">
 -->
-          <div class="about">
+          <div id="about">
             <h2>About 'Simon' Game</h2>
             <p>From Wikipedia, the free encyclopedia</p>
             <p>Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard J. Morrison,[1] with software programming by Lenny Cope. The device creates a series of tones and lights and requires a user to repeat the sequence. If the user
@@ -72,7 +80,7 @@
 
         <div class="col-sm-12 col-md-6">
 
-          <div class="row ">
+          <div id="game" class="row ">
             <div col-xs-12>
               <h2 id="information">Press Start/Reset to begin...</h2>
             </div>
@@ -86,7 +94,7 @@
                 </div>
                 <div class="game-row">
                   <button id="startReset" class="button" onclick="resetGamePressed()">Start/Reset</button>
-                  <h2 id="clickNumber">0</h2>
+                  <h2 id="roundNumber">0</h2>
 
                 </div>
                 <div class="game-row">
@@ -120,12 +128,20 @@
     <div class="container-fluid contact">
 
       <div id="contact" class="row">
-        <div class="col-xs-12">
-          <h2>Contact Me...</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima obcaecati earum consequatur mollitia omnis corporis provident, cumque ipsum quo minus aliquid eaque dolore voluptatem in illum, hic, eos ea. Facilis.</p>
-          <p>Facere corporis ratione natus, beatae eius temporibus ipsa perferendis velit inventore pariatur qui iste debitis, similique iusto omnis quae commodi. Vitae accusantium ducimus fugiat numquam nulla accusamus, nostrum aperiam blanditiis?</p>
-          <p>Culpa saepe odit officiis accusamus aperiam voluptates recusandae alias provident, ducimus adipisci quibusdam reiciendis autem similique porro nihil tempora modi blanditiis animi aspernatur impedit pariatur. Iste, commodi soluta quos nostrum!</p>
-          <p>Animi rem quam ab reiciendis officiis vero id soluta placeat rerum fugiat! Dolorem ullam reprehenderit ipsam ad doloremque esse, accusamus nulla eius magnam quaerat dolore incidunt tempore, vel debitis illo?</p>
+        <div class="col-xs-offset-1 col-xs-10">
+          <div>
+            <h2>Would you like to contact me?</h2>
+            <p>If you like the game and would like to contact me about any other projects then leave your details below and I will get back to you.</p>
+          </div>
+          <div>
+            <form onsubmit="return sendMail(this);" method="POST">
+              <input type="text" name="name" class="form-control" id="fullname" Placeholder="Your Name" required/>
+              <input type="text" name="emailaddress" class="form-control" id="emailaddress" Placeholder="Your Email Address" required/>
+              <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" Placeholder="Details" required></textarea>
+              <!--<button type="primary" class="btn btn-primary">Submit</button>-->
+              <button id="submit" class="button">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -158,6 +174,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
   <script type="text/javascript" src="assets/js/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../assets/js/sendEmail.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 .row {
   text-align: center; }
 
-.game-row, #red, #yellow, #blue, #green, #clickNumber, .large-circle, #startReset {
+.game-row, #red, #yellow, #blue, #green, #roundNumber, .large-circle, #startReset {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -71,7 +71,7 @@
   border-width: 2px;
   border-color: white; }
 
-#clickNumber {
+#roundNumber {
   text-align: center;
   font-weight: 400;
   font-size: 30px;
@@ -120,8 +120,8 @@
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 10px;
-  margin-left: 15px;
-  width: 85px;
+  margin-left: 0px;
+  width: 100px;
   /*font-size: 0.9em;*/
   font-weight: 400; }
 
@@ -141,6 +141,15 @@
   border-width: 1px;
   border-color: white; }
 
+#submit {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-right: 10px;
+  margin-left: 15px;
+  width: 85px;
+  font-size: 1.4em;
+  /*font-weight: 400;*/ }
+
 .button:hover {
   /* background-color: rgba(255, 0, 0, 0.3)*/
   background: #ff0000;
@@ -156,3 +165,7 @@
   transform: translateY(4px); }
 
 /*# sourceMappingURL=main.css.map */
+
+#contact p{
+  margin-bottom: 30px;
+}
