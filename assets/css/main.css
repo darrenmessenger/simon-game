@@ -1,157 +1,68 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700");
+/*******************************************VARIABLES*******************************************/
+/*******************************************COMMON FEATURES*******************************************/
+.btn {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #e84610;
+  color: #fff; }
+
+/*mixin that can be used to create different colour overlays*/
+/*Use the mixin to create coloured overlays*/
+.opaque-overlay-red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.7); }
+
+.opaque-overlay-yellow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 0, 0.8); }
+
+.opaque-overlay-green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 128, 0, 0.8); }
+
+.opaque-overlay-blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 255, 0.6); }
+
+/*Common Row features*/
 .row {
   text-align: center; }
 
-.game-row, #red, #yellow, #blue, #green, #roundNumber, .large-circle, #startReset {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 5px auto; }
-
-.gamebutton {
-  background-color: transparent;
-  /*-moz-border-radius:50%;
-    -webkit-border-radius:50%;
-    width:100px;*/
-  animation-duration: 0.3s; }
-
-#red {
-  width: 100px;
-  height: 100px;
-  background: red;
-  border-top-right-radius: 100%;
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-  border-top-left-radius: 20%;
-  margin-left: 20px;
-  margin-bottom: 5px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: white; }
-
-#yellow {
-  width: 100px;
-  height: 100px;
-  background: yellow;
-  border-bottom-left-radius: 100%;
-  border-top-right-radius: 20%;
-  border-bottom-right-radius: 20%;
-  border-top-left-radius: 20%;
-  margin-right: 20px;
-  margin-top: 5px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: white; }
-
-#blue {
-  width: 100px;
-  height: 100px;
-  background: blue;
-  border-bottom-right-radius: 100%;
-  border-top-right-radius: 20%;
-  border-top-left-radius: 20%;
-  border-bottom-left-radius: 20%;
-  margin-left: 20px;
-  margin-top: 5px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: white; }
-
-#green {
-  width: 100px;
-  height: 100px;
-  background: green;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 20%;
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-  margin-right: 20px;
-  margin-bottom: 5px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: white; }
-
-#roundNumber {
-  text-align: center;
-  font-weight: 400;
-  font-size: 30px;
-  margin-right: 110px;
-  padding-right: 5px;
-  margin-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  width: 25px;
-  animation-duration: 0.4s;
-  color: white; }
-
-.large-circle {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 15px solid rgba(0, 0, 0, 0.1);
-  height: 320px;
-  width: 320px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  text-align: center;
-  border-style: solid;
-  border-width: 3px;
-  border-color: white; }
-
-.clickButton {
-  filter: brightness(50%); }
-
-#information {
-  font-weight: 500;
-  background-color: rgba(0, 0, 0, 0.5);
-  animation-duration: 2s;
-  display: inline-block;
-  color: white;
-  font-size: 1.2em;
-  border-radius: 20px;
-  background: rgba(255, 0, 0, 0.9);
-  padding: 0.3em 0.5em 0.3em 0.5em;
-  text-align: center;
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
-  margin-top: 50px; }
-
-#startReset {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 10px;
-  margin-left: 0px;
-  width: 100px;
-  /*font-size: 0.9em;*/
-  font-weight: 400; }
-
+/*Common button features*/
 .button {
   display: inline-block;
   padding: 0px 0px;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
   outline: none;
   color: white;
-  background-color: rgba(255, 0, 0, 0.9);
-  border: none;
-  border-radius: 15px;
+  background-color: red;
   box-shadow: 0 6px darkred;
+  text-align: center;
+  text-decoration: none;
   border-style: solid;
   border-width: 1px;
-  border-color: white; }
+  border-color: white;
+  border-radius: 15px; }
 
-#submit {
-  margin-top: 20px;
-  margin-bottom: 40px;
-  margin-right: 10px;
-  margin-left: 15px;
-  width: 85px;
-  font-size: 1.4em;
-  /*font-weight: 400;*/ }
-
+/*Common button hover features*/
 .button:hover {
-  /* background-color: rgba(255, 0, 0, 0.3)*/
   background: #ff0000;
   color: #000000;
   transition: all 0.1s ease-in-out;
@@ -159,13 +70,244 @@
   -webkit-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out; }
 
+/*Common button active features - makes it look like the button has been clicked down */
 .button:active {
   background-color: rgba(255, 0, 0, 0.9);
   box-shadow: 0 5px #666;
   transform: translateY(4px); }
 
-/*# sourceMappingURL=main.css.map */
+/*******************************************NAVIGATION DETAILS*******************************************/
+/*Main features of the navigation bar*/
+.navbar {
+  margin-bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 0, 0, 0.9);
+  border: 0;
+  font: white; }
 
-#contact p{
-  margin-bottom: 30px;
-}
+/*Navigation links features when hovering over them.*/
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: yellow;
+  color: black;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out; }
+
+/*navigation menu text colour*/
+.navbar-default .navbar-nav > li > a {
+  color: white; }
+
+/*navigation menu text colour*/
+.navbar-default .navbar-text {
+  color: white; }
+
+/*Make sure the menu title stays white*/
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+  color: white; }
+
+/*Make sure you cannot see the border*/
+.navbar-default .navbar-collapse {
+  border-color: transparent; }
+
+/*Remove the border from the burger icon*/
+.navbar-default .navbar-toggle {
+  border: 0; }
+
+/*Burger icon colour*/
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white; }
+
+/*Make sure the menu title stays white*/
+.navbar .navbar-brand {
+  font-weight: bold;
+  color: white; }
+
+/*Make the menu items on the navigation bold*/
+.navbar-default .navbar-nav a {
+  font-weight: bold; }
+
+/*******************************************ABOUT DETAILS*******************************************/
+/*Features of about*/
+#about {
+  position: relative;
+  padding: 30px 0px 0px 0px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600; }
+
+/*Enable the user to read more in wikipedia*/
+.read-more {
+  text-align: center;
+  color: white;
+  font-size: 0.8em; }
+
+/*******************************************GAME DETAILS*******************************************/
+/*Common features for the game row*/
+.game-row, #red, #yellow, #blue, #green, #roundNumber, .large-circle, #startReset {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px auto; }
+
+/*Game button 'shake' duration*/
+.gamebutton {
+  animation-duration: 0.15s; }
+
+/*Common button features*/
+#red, #yellow, #blue, #green {
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white; }
+
+/*Red button */
+#red {
+  background: red;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  border-top-left-radius: 20%;
+  margin-left: 20px;
+  margin-bottom: 5px; }
+
+/*Yellow button */
+#yellow {
+  background: yellow;
+  border-bottom-left-radius: 100%;
+  border-top-right-radius: 20%;
+  border-bottom-right-radius: 20%;
+  border-top-left-radius: 20%;
+  margin-right: 20px;
+  margin-top: 5px; }
+
+/*Blue button */
+#blue {
+  background: blue;
+  border-bottom-right-radius: 100%;
+  border-top-right-radius: 20%;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+  margin-left: 20px;
+  margin-top: 5px; }
+
+/*Green button */
+#green {
+  background: lime;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  margin-right: 20px;
+  margin-bottom: 5px; }
+
+/*Features of the counter that keeps track of the current 'round'*/
+#roundNumber {
+  text-align: center;
+  margin: 0px 110px 0px 0px;
+  padding-right: 5px;
+  width: 25px;
+  animation-duration: 0.4s;
+  color: white;
+  font-weight: 400;
+  font-size: 30px; }
+
+/*Features of the main circle containing the game. */
+.large-circle {
+  border: 15px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 320px;
+  width: 320px;
+  text-align: center;
+  border-style: solid;
+  border-width: 3px;
+  border-color: white;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%; }
+
+/*Features of the start/reset button that resets the game*/
+#startReset {
+  margin: 0px 10px 0px 0px;
+  width: 100px;
+  font-weight: 400; }
+
+/*Features of the information 'banner' that tells the user some useful information*/
+#information {
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-duration: 2s;
+  display: inline-block;
+  color: white;
+  background: rgba(255, 0, 0, 0.9);
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 1.2em;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 20px; }
+
+/*******************************************CONTACT DETAILS*******************************************/
+/*Features of the contact form*/
+.form-control {
+  margin-top: 15px;
+  color: black;
+  border-color: black; }
+
+/*Contact submit button features*/
+#submit {
+  margin: 20px 10px 40px 15px;
+  width: 85px;
+  font-size: 1.3em; }
+
+/*******************************************FOOTER DETAILS*******************************************/
+/*Features of the main footer*/
+footer {
+  background-color: rgba(0, 128, 0, 0.8);
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 20px; }
+
+/*Features of the social links*/
+.footer-social .social-links li a i {
+  width: 40px;
+  height: 40px;
+  padding: 12px 0;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1.6rem;
+  text-align: center;
+  color: white;
+  background-color: red;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out; }
+
+/*Features when hovering over social links*/
+.footer-social .social-links li a i:hover {
+  background: red;
+  color: black; }
+
+/*Features of the copyright statement at bottom of page*/
+.copyright {
+  font-size: 0.8em; }
+
+/*Icon features*/
+.feature .glyphicon {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 45px;
+  line-height: 45px; }
+
+/*# sourceMappingURL=main.css.map */

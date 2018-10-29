@@ -1,9 +1,10 @@
 /***************************Variables*******************************/
 
-var gameScore = 0;
+var roundNumber = 0;
 var simonGame = [];
 var simonColours = ['#green', '#red', '#blue', '#yellow'];
-var motivation = ['Nice move!', 'Great move!', 'You are a genius!', 'Good stuff!', 'What a memory!', 'Perfect!']
+var simonColoursWakeUp = ['#yellow', '#green', '#red', '#blue', '#red', '#green', '#yellow', '#blue'];
+var motivation = ['Nice move!', 'Great move!', 'You are a genius!', 'Good stuff!', 'What a memory!', 'Perfect!', 'Excellent!']
 var playerGame = [];
 var myTimerWaitForInformation = 0;
 var greenSound = new Audio("../assets/audio/greenSound.mp3");
@@ -11,139 +12,131 @@ var redSound = new Audio("../assets/audio/redSound.mp3");
 var blueSound = new Audio("../assets/audio/blueSound.mp3");
 var yellowSound = new Audio("../assets/audio/yellowSound.mp3");
 var wrongMoveSound = new Audio("../assets/audio/Buzzer-SoundBible.com-188422102.mp3");
+var InformationString = ``;
 
 /***************************Game Functions*******************************/
 
-/*function addToPlayer(id) {
-  console.log("addToPlayer function...");
-  var elementColour = "#"+id
-  playerGame.push(elementColour);
-  playerTurn(elementColour);
-} */
-
+/*When a coloured button is pressed on the game this fuction is called. */
 function playerClicked(id) {
-  console.log("playerClicked function...");
   var elementColour = "#" + id;
   playerGame.push(elementColour);
   checkPlayerClick();
 }
 
+/*Check which colour the player clicked*/
 function checkPlayerClick() {
-  console.log("checkPlayerClick function...");
+  clearTimeout(myTimerWaitForInformation);
+  var tmpInformationString = `Wrong move! You made it to round ${roundNumber}. Try again. Press Start/Reset...`;
   if (playerGame[playerGame.length - 1] !== simonGame[playerGame.length - 1]) {
-    console.log('Wrong click');
     wrongMoveSound.play();
-    var s = `Wrong move! You made it to round ${gameScore}. Try again. Press Start/Reset...`;
-    information(s);
+    information(tmpInformationString);
+    InformationString = tmpInformationString;
     myTimerWaitForInformation = setInterval(waitForInformation, 3000);
-
-    function waitForInformation() {
-      informationFlash(s);
-    }
     resetGame();
   }
   else {
-
-    /*information("Good move!");*/
-
-    /*sound(x);*/
     var check = playerGame.length === simonGame.length;
     if (check) {
-      if (gameScore == 1) {
+      if (roundNumber == 1) {
         information("Good Start!");
       }
-      if (gameScore != 1) {
-        information(motivation[(Math.floor(Math.random() * 6))]);
+      if (roundNumber != 1) {
+        information(motivation[(Math.floor(Math.random() * 7))]);
       }
-      var myTimer = setTimeout(waitForNextGameScore, 2000);
+      var myTimer = setTimeout(waitForNextRound, 2000);
 
-      function waitForNextGameScore() {
-        nextGameScore();
+      function waitForNextRound() {
+        nextRound();
       }
     }
   }
-
-
 }
 
+/*Functions to flash an information message intermittently when a wrong button is pressed*/
+function waitForInformation() {
+  informationFlash(InformationString);
+}
+
+function informationFlash(infoDescription) {
+  var animationName = 'animated flash';
+  var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
+
+  $('#information').html(infoDescription).addClass(animationName).one(animationEnd, function() {
+    $(this).removeClass(animationName);
+  })
+}
+
+/*When the start/reset button is pressed this function is called*/
 function resetGamePressed() {
-  console.log("resetGamePressed function...");
-
   clearTimeout(myTimerWaitForInformation);
-
   information("Let's play. Copy the random colours");
   wakeUp();
   resetGame();
-  var myTimer = setTimeout(waitForNextGameScore, 2000);
+  
+  var myTimer = setTimeout(waitForNextRound, 4000);
 
-  function waitForNextGameScore() {
-    nextGameScore();
+  function waitForNextRound() {
+    roundNumber = 0;
+    nextRound();
   }
-
 }
 
+/*Reset the game*/
 function resetGame() {
   console.log("resetGame function...");
   simonGame = [];
-  gameScore = 0;
 }
 
+function wakeUp2() {
+  var timeoutDuration = 0;
+  var colour = "";
+  var interval = 0;
+
+  for (var i = 0; i < 10; i++) {
+    // This will loop 10 times
+    setInterval(function() {
+      timeoutDuration += 500;
+      colour = simonColours[(Math.floor(Math.random() * 4))];
+
+      playSound(colour);
+      playGame(colour);
+    }, 5000);
+
+  }
+}
+
+/*When the game is reset then all the buttons light up*/
 function wakeUp() {
-  setTimeout(function() {
-    playGame("#yellow");
-    yellowSound.play();
-  }, 200);
-  setTimeout(function() {
-    playGame("#green");
-    greenSound.play();
-  }, 400);
-  setTimeout(function() {
-    playGame("#red");
-    redSound.play();
-  }, 600);
-  setTimeout(function() {
-    playGame("#blue");
-    blueSound.play();
-  }, 800);
-  setTimeout(function() {
-    playGame("#red");
-    redSound.play();
-  }, 1000);
-  setTimeout(function() {
-    playGame("#green");
-    greenSound.play();
-  }, 1200);
-  setTimeout(function() {
-    playGame("#yellow");
-    yellowSound.play();
-  }, 1400);
-  setTimeout(function() {
-    playGame("#blue");
-    blueSound.play();
-  }, 1600);
+  var interval = 200;
+  var intervalIncrement = 200;
+
+    $.each(simonColoursWakeUp, function (index, value) {
+    interval += intervalIncrement;
+    setTimeout(function() {
+      playGame(value);
+      playSound(value);
+    }, interval);
+  });
 }
 
-function nextGameScore() {
-  console.log("nextGameScore function...");
-  gameScore++;
+/*Increment the next round*/
+function nextRound() {
+  roundNumber++;
   $('#roundNumber').addClass('animated fadeOutDown');
-
   setTimeout(function() {
-    $('#roundNumber').removeClass('fadeOutDown').html(gameScore).addClass('fadeInDown');
+    $('#roundNumber').removeClass('fadeOutDown').html(roundNumber).addClass('fadeInDown');
   }, 200);
-
   generateMove();
 }
 
+/*Pick a random colour from the array*/
 function generateMove() {
   simonGame.push(simonColours[(Math.floor(Math.random() * 4))]);
-  console.log("generateMove: Generated colour is: %s", simonGame[simonGame.length - 1]);
-
   displayGameMoves();
 }
 
+/*Display the generated moves*/
 function displayGameMoves() {
-  console.log("displayGameMoves function...");
   var i = 0;
   var moves = setInterval(function() {
     playGame(simonGame[i]);
@@ -152,65 +145,35 @@ function displayGameMoves() {
       clearInterval(moves);
     }
   }, 800)
-
   clearPlayerGame();
 }
 
+/*Display the generated moves*/
 function playGame(elementColour) {
-  console.log("playGame function...");
-  console.log("Shake button..........................");
   var animationName = 'animated shake clickButton';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
 
   playSound(elementColour);
-
   $(elementColour).addClass(animationName).one(animationEnd, function() {
     $(this).removeClass(animationName);
-
   })
-
 }
 
-/*function nextLevel() {
-   console.log("nextLevel function...");
-  nextGameScore();
-}*/
-
-
+/*Clear the player moves*/
 function clearPlayerGame() {
-  console.log("clearPlayerGame function...");
   playerGame = [];
 }
 
 function information(infoDescription) {
-  console.log("information function...");
   var animationName = 'animated tada';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
 
   $('#information').html(infoDescription).addClass(animationName).one(animationEnd, function() {
     $(this).removeClass(animationName);
   })
-
-  /*$('#information').addClass('animated fadeOutDown');
-  
-  setTimeout(function(){
-    $('#information').removeClass('fadeOutDown').html("You Lost! Try Again. Press Reset...").addClass('fadeInDown');
-  }, 200);*/
 }
 
-function informationFlash(infoDescription) {
-  console.log("information function...");
-  var animationName = 'animated flash';
-  var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-
-  $('#information').html(infoDescription).addClass(animationName).one(animationEnd, function() {
-    $(this).removeClass(animationName);
-  })
-
-
-}
-
-
+/*Function to decide which sound to play*/
 function playSound(name) {
   switch (name) {
     case '#green':
@@ -229,12 +192,11 @@ function playSound(name) {
 }
 
 /***************************Button Click Functions*******************************/
+
+/*Shake the red button and make a sound when it is pressed*/
 $('#red').click(function() {
-  console.log("#red clicked function...");
-  console.log("Shake button..........................");
   var animationName = 'animated shake clickButton';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-
 
   $('#red').addClass(animationName).one(animationEnd, function() {
     $(this).removeClass(animationName);
@@ -242,9 +204,8 @@ $('#red').click(function() {
   redSound.play();
 })
 
+/*Shake the yellow button and make a sound when it is pressed*/
 $('#yellow').click(function() {
-  console.log("#yellow clicked function...");
-  console.log("Shake button..........................");
   var animationName = 'animated shake clickButton';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
 
@@ -254,10 +215,9 @@ $('#yellow').click(function() {
   yellowSound.play();
 })
 
+/*Shake the blue button and make a sound when it is pressed*/
 $('#blue').click(function() {
-  console.log("#blue clicked function...");
   var animationName = 'animated shake clickButton';
-  console.log("Shake button..........................");
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
 
   $('#blue').addClass(animationName).one(animationEnd, function() {
@@ -266,9 +226,8 @@ $('#blue').click(function() {
   blueSound.play();
 })
 
+/*Shake the green button and make a sound when it is pressed*/
 $('#green').click(function() {
-  console.log("#green clicked function...");
-  console.log("Shake button..........................");
   var animationName = 'animated shake clickButton';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
 
@@ -278,6 +237,7 @@ $('#green').click(function() {
   greenSound.play();
 })
 
+/*When a navigation link is clicked the page will scroll smoothly*/
 $(document).ready(function() {
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {

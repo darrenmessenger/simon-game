@@ -1,3 +1,6 @@
+
+/*Function to send an email if the submit button is pressed on the contact form.*/
+
 function sendMail(contactForm) {
     emailjs.send("gmail", "simon", {
         "from_name": contactForm.name.value,

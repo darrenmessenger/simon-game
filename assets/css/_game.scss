@@ -1,0 +1,155 @@
+/*******************************************GAME DETAILS*******************************************/
+
+/*Common features for the game row*/
+
+.game-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px auto;
+}
+
+/*Game button 'shake' duration*/
+
+.gamebutton {
+    animation-duration: 0.15s;
+}
+
+/*Common button features*/
+
+%button-shared {
+    width: 100px;
+    height: 100px;
+    border: {
+        style: solid;
+        width: 2px;
+        color: white;
+    }
+}
+
+/*Red button */
+
+#red {
+    @extend .game-row;
+    @extend %button-shared;
+    background: $simonRed;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border-top-left-radius: 20%;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+/*Yellow button */
+
+#yellow {
+    @extend .game-row;
+    @extend %button-shared;
+    background: $simonYellow;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border-top-left-radius: 20%;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+/*Blue button */
+
+#blue {
+    @extend .game-row;
+    @extend %button-shared;
+    background: $simonBlue;
+    border-bottom-right-radius: 100%;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+/*Green button */
+
+#green {
+    @extend .game-row;
+    @extend %button-shared;
+    background: $simonGreen;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+/*Features of the counter that keeps track of the current 'round'*/
+
+#roundNumber {
+    @extend .game-row;
+    text-align: center;
+    margin: 0px 110px 0px 0px;
+    padding-right: 5px;
+    width: 25px;
+    animation-duration: 0.4s;
+    color: white;
+    font: {
+        weight: 400;
+        size: 30px;
+    }
+    ;
+}
+
+/*Features of the main circle containing the game. */
+
+.large-circle {
+    @extend .game-row;
+    border: 15px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 320px;
+    width: 320px;
+    text-align: center;
+    border: {
+        style: solid;
+        width: 3px;
+        color: white;
+        radius: 50%;
+    }
+    ;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+/*Features of the start/reset button that resets the game*/
+
+#startReset {
+    @extend .game-row;
+    margin: 0px 10px 0px 0px;
+    width: 100px;
+    font-weight: 400;
+}
+
+/*Features of the information 'banner' that tells the user some useful information*/
+
+#information {
+    background-color: rgba(0, 0, 0, 0.5);
+    animation-duration: 2s;
+    display: inline-block;
+    color: white;
+    background: rgba(255, 0, 0, 0.9);
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    text-align: center;
+    margin-top: 50px;
+    font: {
+        weight: 500;
+        size: 1.2em;
+    }
+    ;
+    border: {
+        style: solid;
+        width: 2px;
+        color: white;
+        radius: 20px;
+    }
+    ;
+}

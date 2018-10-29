@@ -1,0 +1,75 @@
+/*******************************************NAVIGATION DETAILS*******************************************/
+
+/*Main features of the navigation bar*/
+
+.navbar {
+    margin-bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.9);
+    border: 0;
+    font: white;
+}
+
+/*Navigation links features when hovering over them.*/
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    background-color: $simonYellow;
+    color: black;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+/*navigation menu text colour*/
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+/*navigation menu text colour*/
+
+.navbar-default .navbar-text {
+    color: white;
+}
+
+/*Make sure the menu title stays white*/
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+    color: white;
+}
+
+/*Make sure you cannot see the border*/
+
+.navbar-default .navbar-collapse {
+    border-color: transparent;
+}
+
+/*Remove the border from the burger icon*/
+
+.navbar-default .navbar-toggle {
+    border: 0;
+}
+
+/*Burger icon colour*/
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+/*Make sure the menu title stays white*/
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: white;
+}
+
+/*Make the menu items on the navigation bold*/
+
+.navbar-default .navbar-nav a {
+    font-weight: bold;
+}

@@ -1,0 +1,23 @@
+/*******************************************ABOUT DETAILS*******************************************/
+
+/*Features of about*/
+
+#about {
+    position: relative;
+    padding: 30px 0px 0px 0px;
+    background-color: transparent;
+    color: white;
+    font: {
+        size: 1.2em;
+        weight: 600;
+    }
+}
+
+
+/*Enable the user to read more in wikipedia*/
+
+.read-more {
+    text-align: center;
+    color: white;
+    font-size: 0.8em;
+}
