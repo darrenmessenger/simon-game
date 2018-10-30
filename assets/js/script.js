@@ -19,6 +19,7 @@ var InformationString = ``;
 /*When a coloured button is pressed on the game this fuction is called. */
 function playerClicked(id) {
   var elementColour = "#" + id;
+  playSound(elementColour);
   playerGame.push(elementColour);
   checkPlayerClick();
 }
@@ -72,7 +73,7 @@ function resetGamePressed() {
   information("Let's play. Copy the random colours");
   wakeUp();
   resetGame();
-  
+
   var myTimer = setTimeout(waitForNextRound, 4000);
 
   function waitForNextRound() {
@@ -87,30 +88,12 @@ function resetGame() {
   simonGame = [];
 }
 
-function wakeUp2() {
-  var timeoutDuration = 0;
-  var colour = "";
-  var interval = 0;
-
-  for (var i = 0; i < 10; i++) {
-    // This will loop 10 times
-    setInterval(function() {
-      timeoutDuration += 500;
-      colour = simonColours[(Math.floor(Math.random() * 4))];
-
-      playSound(colour);
-      playGame(colour);
-    }, 5000);
-
-  }
-}
-
 /*When the game is reset then all the buttons light up*/
 function wakeUp() {
   var interval = 250;
   var intervalIncrement = 250;
 
-    $.each(simonColoursWakeUp, function (index, value) {
+  $.each(simonColoursWakeUp, function(index, value) {
     interval += intervalIncrement;
     setTimeout(function() {
       playGame(value);
@@ -195,48 +178,40 @@ function playSound(name) {
 
 /***************************Button Click Functions*******************************/
 
-/*Shake the red button and make a sound when it is pressed*/
+/*Shake the red button when it is pressed*/
 $('#red').click(function() {
   var animationName = 'animated shake clickButton';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-
   $('#red').addClass(animationName).one(animationEnd, function() {
     $(this).removeClass(animationName);
   })
-  redSound.play();
 })
 
-/*Shake the yellow button and make a sound when it is pressed*/
+/*Shake the yellow button when it is pressed*/
 $('#yellow').click(function() {
   var animationName = 'animated shake clickButton';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-
   $('#yellow').addClass(animationName).one(animationEnd, function() {
     $(this).removeClass(animationName);
   })
-  yellowSound.play();
 })
 
-/*Shake the blue button and make a sound when it is pressed*/
+/*Shake the blue button when it is pressed*/
 $('#blue').click(function() {
   var animationName = 'animated shake clickButton';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-
   $('#blue').addClass(animationName).one(animationEnd, function() {
     $(this).removeClass(animationName);
   })
-  blueSound.play();
 })
 
-/*Shake the green button and make a sound when it is pressed*/
+/*Shake the green button when it is pressed*/
 $('#green').click(function() {
   var animationName = 'animated shake clickButton';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-
   $('#green').addClass(animationName).one(animationEnd, function() {
     $(this).removeClass(animationName);
   })
-  greenSound.play();
 })
 
 /*When a navigation link is clicked the page will scroll smoothly*/

@@ -1,15 +1,19 @@
 /*******************************************COMMON FEATURES*******************************************/
 
+/*Set the default font and font size*/
 
 #body {
-  font-family: 'sRoboto', sans-serif;
-  font-size:16px;
-  padding:10px;
-   padding-bottom:120px;   /* Height of the footer */
+    font-family: 'sRoboto', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    padding-bottom: 120px;
+    /* Height of the footer */
 }
 
+/*Background image */
+
 .bg {
-     background: url("../images/memorizing.jpg") no-repeat center center fixed;
+    background: url("../images/memorizing.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -18,34 +22,38 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    width:100%;
+    width: 100%;
 }
 
-.main-container{
-    margin-top:50px;
+/*Set the main container margins*/
+
+.main-container {
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
-@mixin button($color, $size) {
-   width: $size;
-   height: $size / 2;
-   border: 1px solid $color;
+@mixin button($color,
+$size) {
+    width: $size;
+    height: $size / 2;
+    border: 1px solid $color;
 
-
-
-   @if $color == #e84610 {
-       color: #fff;
-   } @else {
-       color: $color;
-   }
+    @if $color==#e84610 {
+        color: #fff;
+    }
+    @else {
+        color: $color;
+    }
 }
 
 .btn {
-   @include button(#e84610, 200px)
+    @include button(#e84610,
+    200px)
 }
 
 /*mixin that can be used to create different colour overlays*/
-@mixin opaque($buttonColour){
+
+@mixin opaque($buttonColour) {
     position: absolute;
     top: 0;
     left: 0;
@@ -55,6 +63,7 @@
 }
 
 /*Use the mixin to create coloured overlays*/
+
 .opaque-overlay-red {
     @include opaque(rgba(255, 0, 0, 0.7))
 }
@@ -90,7 +99,8 @@
     text: {
         align: center;
         decoration: none;
-    };
+    }
+    ;
     border: {
         style: solid;
         width: 1px;
