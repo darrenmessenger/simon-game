@@ -1,7 +1,30 @@
 /*******************************************COMMON FEATURES*******************************************/
 
 
+#body {
+  font-family: 'sRoboto', sans-serif;
+  font-size:16px;
+  padding:10px;
+   padding-bottom:120px;   /* Height of the footer */
+}
 
+.bg {
+     background: url("../images/memorizing.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width:100%;
+}
+
+.main-container{
+    margin-top:50px;
+    margin-bottom: 50px;
+}
 
 @mixin button($color, $size) {
    width: $size;

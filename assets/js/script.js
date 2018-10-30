@@ -107,8 +107,8 @@ function wakeUp2() {
 
 /*When the game is reset then all the buttons light up*/
 function wakeUp() {
-  var interval = 200;
-  var intervalIncrement = 200;
+  var interval = 250;
+  var intervalIncrement = 250;
 
     $.each(simonColoursWakeUp, function (index, value) {
     interval += intervalIncrement;
@@ -190,6 +190,8 @@ function playSound(name) {
       break;
   };
 }
+
+
 
 /***************************Button Click Functions*******************************/
 
