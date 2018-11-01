@@ -14,6 +14,12 @@ var yellowSound = new Audio("../assets/audio/yellowSound.mp3");
 var wrongMoveSound = new Audio("../assets/audio/Buzzer-SoundBible.com-188422102.mp3");
 var InformationString = ``;
 
+
+
+(function() {
+  emailjs.init("user_gqsmetIRnz8HskVK7nXeh");
+})();
+
 /***************************Game Functions*******************************/
 
 /*When a coloured button is pressed on the game this fuction is called. */

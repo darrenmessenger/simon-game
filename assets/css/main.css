@@ -111,7 +111,7 @@
   width: 100%;
   background-color: rgba(255, 0, 0, 0.9);
   border: 0;
-  font: white; }
+  color: white; }
 
 /*Navigation links features when hovering over them.*/
 .navbar-default .navbar-nav > li > a:focus,
@@ -156,6 +156,10 @@
 /*Make the menu items on the navigation bold*/
 .navbar-default .navbar-nav a {
   font-weight: bold; }
+
+/*Make sure the background of the burger bar is transparent when active. */
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent; }
 
 /*******************************************ABOUT DETAILS*******************************************/
 /*Features of about*/
