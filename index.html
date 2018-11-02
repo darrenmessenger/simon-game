@@ -9,7 +9,7 @@
   <title>Memory Game | Simon Game To Test Your Memory</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/main.css">
@@ -18,7 +18,7 @@
 
 <!------------Body---------->
 
-<body class="body">
+<body id="body">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -33,9 +33,9 @@
       </div>
       <div class="navbar-collapse collapse" id="navbar">
         <ul class="nav navbar-nav">
-          <li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="index.html">Home</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#body">Home</a></li>
           <li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#about">About</a></li>
-          <li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#information">Game</a></li>
+          <li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#game">Game</a></li>
           <li><a data-toggle="collapse" data-target=".navbar-collapse.in" href="#contact">Contact</a></li>
         </ul>
         <div class="navbar-header navbar-right hidden-xs">
@@ -47,7 +47,7 @@
 
   <!------------About------------>
 
-  <div class="bg">
+  <div class="bg aboutGame">
     <div class="opaque-overlay-blue"></div>
     <div class="container-fluid main-container">
       <div class="row">
@@ -64,14 +64,13 @@
         </div>
 
         <!------------Game------------>
-
         <div class="col-sm-12 col-md-6">
           <div class="row">
             <div class="col-xs-12">
               <h2 id="information">Press Start/Reset to begin...</h2>
             </div>
           </div>
-          <div class="row ">
+          <div id="game" class="row ">
             <div class="large-circle ">
               <div>
                 <div class="game-row">
@@ -114,7 +113,6 @@
               <input type="text" name="emailaddress" class="form-control" id="emailaddress" Placeholder="Your Email Address" required/>
               <label for="projectsummary">Project Summary</label>
               <textarea rows="5" name="projectsummary" class="form-control" id="projectsummary" Placeholder="Details" required></textarea>
-              <!--<button type="primary" class="btn btn-primary">Submit</button>-->
               <button id="submit" class="button">Submit</button>
             </form>
           </div>
@@ -146,25 +144,10 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      var myCenter = new google.maps.LatLng(51.297800, -0.167720);
-      var map = new google.maps.Map(
-        document.getElementById('map'), { zoom: 8, center: myCenter });
-      var marker = new google.maps.Marker({ position: myCenter, map: map });
-      google.maps.event.addListener(marker, 'click', function() {
-        map.setZoom(11);
-        map.setCenter(marker.getPosition());
-      });
-    }
-  </script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js " integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin=" anonymous "></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrK_RVqDig825KaoVLgHRMc-5NFu1z5hs&callback=initMap"></script>
   <script src="assets/js/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrK_RVqDig825KaoVLgHRMc-5NFu1z5hs&callback=initMap"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="../assets/js/sendEmail.js"></script>
 </body>

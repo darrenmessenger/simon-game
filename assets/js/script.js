@@ -1,5 +1,6 @@
 /***************************Variables*******************************/
-
+$(document).ready(function () {
+  
 var roundNumber = 0;
 var simonGame = [];
 var simonColours = ['#green', '#red', '#blue', '#yellow'];
@@ -14,11 +15,37 @@ var yellowSound = new Audio("../assets/audio/yellowSound.mp3");
 var wrongMoveSound = new Audio("../assets/audio/Buzzer-SoundBible.com-188422102.mp3");
 var InformationString = ``;
 
-
+/*Common Functions*/
 
 (function() {
   emailjs.init("user_gqsmetIRnz8HskVK7nXeh");
 })();
+
+/*When a navigation link is clicked the page will scroll smoothly*/
+$(document).ready(function() {
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1500, function() {
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 
 /***************************Game Functions*******************************/
 
@@ -180,8 +207,6 @@ function playSound(name) {
   };
 }
 
-
-
 /***************************Button Click Functions*******************************/
 
 /*Shake the red button when it is pressed*/
@@ -220,28 +245,27 @@ $('#green').click(function() {
   })
 })
 
-/*When a navigation link is clicked the page will scroll smoothly*/
-$(document).ready(function() {
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+/***************************Google Map Functions*******************************/
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+/*Initialize and add the map*/
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1500, function() {
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
+function initMap() {
+  // The location of my location
+  var myCenter = new google.maps.LatLng(51.241896, -0.210983);
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: myCenter
   });
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    map: map
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+    map.setZoom(11);
+    map.setCenter(marker.getPosition());
+  });
+}
+
+/*Call the function to Initialze the map*/
+  initMap();
 });

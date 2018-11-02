@@ -10,7 +10,10 @@ function sendMail(contactForm) {
     .then(
         function(response) {
             console.log("SUCCESS", response);
-            alert('Your mail is sent!');
+            alert('Your mail is sent! I will get back to you as soon as possible.');
+            contactForm.name.value = "";
+            contactForm.emailaddress.value = "";
+            contactForm.projectsummary.value = "";
         },
         function(error) {
             console.log("FAILED", error);

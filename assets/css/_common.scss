@@ -2,12 +2,9 @@
 
 /*Set the default font and font size*/
 
-#body {
-    font-family: 'sRoboto', sans-serif;
+body {
+    font-family: 'Nunito', sans-serif;
     font-size: 16px;
-    padding: 10px;
-    padding-bottom: 120px;
-    /* Height of the footer */
 }
 
 /*Background image */
@@ -28,7 +25,6 @@
 /*Set the main container margins*/
 
 .main-container {
-    margin-top: 50px;
     margin-bottom: 50px;
 }
 
