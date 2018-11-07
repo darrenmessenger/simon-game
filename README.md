@@ -9,6 +9,7 @@ The brief was to build a frontend-only website using the technologies that we ha
 
 I have decided to create a simple single-player memory game inspired by Simon. 
 You can click on https://www.youtube.com/watch?v=1Yqj76Q4jJ4 and https://en.wikipedia.org/wiki/Simon_(game) to understand the rules of the game. 
+The live website can be found at https://darrenmessenger.github.io/simon-game/. 
 
 ## Features
 

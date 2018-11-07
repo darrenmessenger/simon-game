@@ -8,11 +8,11 @@ var simonColoursWakeUp = ['#yellow', '#green', '#red', '#blue', '#red', '#green'
 var motivation = ['Nice move!', 'Great move!', 'You are a genius!', 'Good stuff!', 'What a memory!', 'Perfect!', 'Excellent!']
 var playerGame = [];
 var myTimerWaitForInformation = 0;
-var greenSound = new Audio("../assets/audio/greenSound.mp3");
-var redSound = new Audio("../assets/audio/redSound.mp3");
-var blueSound = new Audio("../assets/audio/blueSound.mp3");
-var yellowSound = new Audio("../assets/audio/yellowSound.mp3");
-var wrongMoveSound = new Audio("../assets/audio/Buzzer-SoundBible.com-188422102.mp3");
+var greenSound = new Audio("assets/audio/greenSound.mp3");
+var redSound = new Audio("assets/audio/redSound.mp3");
+var blueSound = new Audio("assets/audio/blueSound.mp3");
+var yellowSound = new Audio("assets/audio/yellowSound.mp3");
+var wrongMoveSound = new Audio("assets/audio/Buzzer-SoundBible.com-188422102.mp3");
 var InformationString = ``;
 
 /*Common Functions*/
