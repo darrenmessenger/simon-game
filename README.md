@@ -8,10 +8,8 @@ This project has been built for the Interactive Frontend Development Milestone P
 The brief was to build a frontend-only website using the technologies that we have learned throughout Interactive Frontend Development. 
 
 I have decided to create a simple single-player memory game inspired by Simon. 
-You can click on [You Tube](https://www.youtube.com/watch?v=1Yqj76Q4jJ4) and [Wikipedia](https://en.wikipedia.org/wiki/Simon_(game)) to understand the rules of the game. 
-The live website can be found at https://darrenmessenger.github.io/simon-game/. 
-
-[You Tube](https://www.youtube.com/watch?v=1Yqj76Q4jJ4)
+You can click on [a You Tube video](https://www.youtube.com/watch?v=1Yqj76Q4jJ4) and [Wikipedia](https://en.wikipedia.org/wiki/Simon_(game)) to understand the rules of the game. 
+The live website can be found [here](https://darrenmessenger.github.io/simon-game/).
 
 ## Features
 
@@ -21,9 +19,10 @@ The wireframes for this website can be found in the repository within Github in 
 
 ### Existing Features
 
-#### Every Page
-On every page there is a full page background of the Monkees. I have applied an overlay over the top of the background to make it slightly darker and make the text easier to read. 
-The main header of every page is clickable and will take you back to the landing page. 
+#### Main Page
+On the main page there is a background image of some random numbers, which seemed to suit the Simon game. 
+The two main sections have this background but I have put a put an opaque overlay over the background image, one in blue and the other in yellow. 
+I chose this as it suited the colours of the actual Simon game (red, blue, green, yellow).
 
 #### Header:
 There is a static header at the top of the page which includes some menu items to take you to different parts of the page. 
