@@ -18,7 +18,11 @@ var InformationString = ``;
 /*Common Functions*/
 
 (function() {
+  /*Initialise emailjs*/
   emailjs.init("user_gqsmetIRnz8HskVK7nXeh");
+  
+  /*Call the function to Initialze the map*/
+  initMap();
 })();
 
 /*When a navigation link is clicked the page will scroll smoothly*/
