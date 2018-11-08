@@ -24,43 +24,34 @@ On the main page there is a background image of some random numbers, which seeme
 The two main sections have this background but I have put a put an opaque overlay over the background image, one in blue and the other in yellow. 
 I chose this as it suited the colours of the actual Simon game (red, blue, green, yellow).
 
-#### Header:
+#### Navigation:
 There is a static header at the top of the page which includes some menu items to take you to different parts of the page. 
 I have incorporated some jquery code that I found on stackoverflow that allows the page to scroll smoothly when a navigation link is clicked. 
-
-#### Navigation:
-On the top of each page there is a navigation bar so that each page can be clicked. The navigation bar remains constant on each page and uses hover.css when hovering over each menu item so that the menu item is highlighted. 
-On larger screens the navigation menu is on one row. On medium screens the navigation menu is on two rows with three items on each row. 
 On small screens the navigation menu disappears and a bootstrap burger button appears so that the menu can be toggled on or off. 
 
-#### The Landing Page:
-A full screen background of the Monkees with a button to link you to the booking page so that you can book the Monkees for your next event. There is also a short history of the Monkees with a link via Wikipedia to learn more about them. 
-If you can't remember how the Monkees sound there is a sample track to remind you. The link to the audio file changed from the local repository to google drive as it did not play when the website was published on github. 
+#### About:
+There is an about section that utilises the bootstrap grid layout. The description of the Simon game is a summary taken from Wikipedia. 
+There is also a 'Read more...' with a link to Wikipedia if the user wants to read more about the game. 
 
-#### The Band Members:
-Each member has a description from Wikipedia along with a photo. There is also a 'Read more...' with a link to Wikipedia for each member. The page utilises the bootstrap grid layout. 
+#### Simon Game:
+This section utilises the bootstrap grid layout. 
 
-#### Audio Tracks:
-There are some sample audio tracks from the Monkees on this page. The page utilises the bootstrap grid layout. 
-The links to the audio files have changed from the local repository to google drive as they did not play when the website was published on github. 
+#### Contact Me:
+This section utilises the bootstrap grid layout. There is a form to allow the user to enter details so that they may contact me if they like the game and want to give me a project or want to discuss something.
+All the details are very clear using descriptive placeholders. I have used [EmailJS](http://www.emailjs.com/) so that when the user presses 'submit' I will receive an email and see the details of what the user has typed in. 
+Once the email has been sent successfully the user will see a message box and the input fields will be blanked out. 
 
-#### Video:
-There is a page with a video showing one of the Monkees tracks. The link to the ideo file changed from the local repository to google drive as it did not play when the website was published on github. 
-
-#### Party Bookings:
-A form to allow the user to enter details so that they may book the Monkees to appear at their own event. All the details are very clear using descriptive placeholders. 
-
-### Features Left to Implement
+I have also used [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial) to show a map of my location. If the user clicks on the Marker then the map will zoom in. 
 
 #### Footer:
-At the bottom of each page there are links to various social media including Facebook, Twitter and YouTube. The links also uses hover.css so they are highlighted when hovered over. These links do not do anything yet. 
-
-#### Search:
-This is displayed on the navigation bar but it doesn't do anything yet. 
+At the bottom of the page there are links to various social media including Twitter, LinkedIN, GitHub, YouTube and Instagram. 
+When the links are clicked then a new page is opened up showing the social media page. 
 
 ## Technologies Used
 
-Bootstrap, html and css have been used during the coding of this website. 
+[Bootstrap](https://getbootstrap.com/), [EmailJS](http://www.emailjs.com/), [Google Fonts],(https://fonts.google.com/), 
+[FontAwesome](https://fontawesome.com/), [Animate.css](https://daneden.github.io/animate.css/), [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial),
+have all been used during the coding of this project. 
 
 ## Testing
 Every page has been tested as described below.

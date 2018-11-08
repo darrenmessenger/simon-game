@@ -16,7 +16,7 @@ function initMap() {
         map: map
     });
 
-    /*If the user clicks on the market then zoom in*/
+    /*If the user clicks on the marker then zoom in*/
     
     google.maps.event.addListener(marker, 'click', function() {
         map.setZoom(11);
