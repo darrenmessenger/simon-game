@@ -107,6 +107,7 @@ function resetGamePressed() {
   information("Let's play. Copy the random colours");
   wakeUp();
   resetGame();
+  countdown_init();
 
   var myTimer = setTimeout(waitForNextRound, 4000);
 
@@ -120,6 +121,7 @@ function resetGamePressed() {
 function resetGame() {
   console.log("resetGame function...");
   simonGame = [];
+  countdown_clear();
 }
 
 /*When the game is reset then all the buttons light up*/
@@ -206,6 +208,44 @@ function playSound(name) {
       yellowSound.play();
       break;
   };
+}
+
+/*Timer Function*/
+
+var countdown;
+var countdown_number;
+
+function countdown_init() {
+  countdown_number = 300; /*Set the timer to 5 mins*/
+  countdown = 0;
+  countdown_trigger();
+}
+
+function countdown_trigger() {
+  if (countdown_number > 0) {
+    countdown_number--;
+    var minutes = Math.floor(countdown_number / 60); 
+    var seconds = countdown_number % 60; 
+
+    timer.innerHTML = "Time remaining: " + minutes + " minutes: " + seconds + " seconds";
+    if (countdown_number > 0) {
+      countdown = setTimeout('countdown_trigger()', 1000);
+    }
+    else {
+      /*Times up!!!!*/
+      clearTimeout(myTimerWaitForInformation);
+      var tmpInformationString = `Times Up! You made it to round ${roundNumber}. Try again. Press Start/Reset...`;
+      wrongMoveSound.play();
+      information(tmpInformationString);
+      InformationString = tmpInformationString;
+      myTimerWaitForInformation = setInterval(waitForInformation, 3000);
+      resetGame();
+    }
+  }
+}
+
+function countdown_clear() {
+  clearTimeout(countdown);
 }
 
 /***************************Button Click Functions*******************************/
