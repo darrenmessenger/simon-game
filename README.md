@@ -31,13 +31,17 @@ The live website can be found [here](https://darrenmessenger.github.io/simon-gam
 - If I want to restart the game at any time then I can press the 'Start/Reset' button. 
 - If I keep copying the sequence of random panels correctly the sequence will increase by one each round.
 - If I keep copying the sequence of random panels correctly the sequence could get quite long as there isn't an end to the game unless a mistake is made or the game times out. 
+ 
+### Process
+
+I went through the user stories and wireframes before embarking on the actual coding of the project to ensure I had a good idea of how to approach things. 
 
 ## Features
 
 #### Main Page
-On the main page there is a background image of some random numbers, which seemed to suit the Simon game. 
-The two main sections have this background but I have put a put an opaque overlay over the background image, one in blue and the other in yellow. 
-I chose this as it suited the colours of the actual Simon game (red, blue, green, yellow).
+On the main page there is a background image of some random numbers. The background image seemed to suit the Simon game. 
+The two main sections have this background but I have put an opaque overlay over the background image, one in blue and the other in yellow. 
+I chose these colours as they suited the colours of the actual Simon game (red, blue, green, yellow).
 
 #### Navigation:
 There is a static header at the top of the page which includes some menu items to take you to different parts of the page. 
@@ -67,16 +71,18 @@ When the links are clicked then a new page is opened up showing the social media
 
 The following technologies have all been used during the coding of this project:
 
-- [Bootstrap](https://getbootstrap.com/) 
-- [JQuery](https://jquery.com/) 
-- [EmailJS](http://www.emailjs.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [FontAwesome](https://fontawesome.com/)
-- [Animate.css](https://daneden.github.io/animate.css/)
-- [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial),
-
+- [Bootstrap](https://getbootstrap.com/) I used bootstrap 3.3.7 to organise the grid layout of the site. 
+- [JQuery](https://jquery.com/). This was used for the gaming functionality. 
+- [SASS](https://sass-lang.com/guide) I have used SCSS files with Preprocessing, Partials, Variables, Imports, Mixins, Extend, and Operators. 
+- [EmailJS](http://www.emailjs.com/) When the contact form is submitted I utilised emailJS to send me an actual email to my email address. 
+- [Google Fonts](https://fonts.google.com/) I chose the 'Nunito' font as I suited my project. 
+- [FontAwesome](https://fontawesome.com/) I used FontAwesome for the icons shown in the footer for the social links. 
+- [Animate.css](https://daneden.github.io/animate.css/) This was useful to imitate a 'vibrating' panel on the game. 
+- [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial) This showed where I am based. 
+- [GitHub](https://github.com/darrenmessenger/simon-game) I used GitHub for version control and to publish the site using GitHub Pages. 
 
 ## Testing
+
 Every aspect of the site has been tested as described below.
 
 ### Header and Navigation
@@ -101,6 +107,23 @@ The 'Read more...' link was checked to make sure a new page was opened with the 
 
 The game has been tested extensively by both me and my family!.
 
+I went through each of the User Stories to make sure that they worked as expected. 
+
+- If I look at the game when the page loads I will see an information 'banner' telling me to press the 'Start/Reset' button to begin. **PASSED**
+- I press a coloured panel and I hear a sound that represents the panel and the panel that I pressed vibrates. **PASSED**
+- I press the 'Start/Reset' button and I can hear and see a start up sequence. **PASSED**
+- After the start up sequence has finished a random panel makes a sound and vibrates. **PASSED**
+- If I correctly copy the random panel sequence that the game displayed then I will see an information message with a random statement and another random panel will be added to the sequence. **PASSED**
+- I can see a countdown timer that starts as soon as the random panel or panels are displayed. **PASSED**
+- If I do not press a panel before the countdown gets to zero then the game is finished and I will hear a buzzer and an information message stating which round I achieved. **PASSED**
+- If I copy the random sequence correcly each time the counter will increase showing me which round I am on. **PASSED**
+- I can see at any time which round I am on by looking at the counter. **PASSED**
+- If I copy the random sequence incorrectly then I will hear a buzzer and an information message stating which round I achieved. **PASSED**
+- If I hear the buzzer that means the game has ended and I will see a flashing information message telling me to press the 'Start/Reset' button. **PASSED**
+- If I want to restart the game at any time then I can press the 'Start/Reset' button. **PASSED**
+- If I keep copying the sequence of random panels correctly the sequence will increase by one each round. **PASSED**
+- If I keep copying the sequence of random panels correctly the sequence could get quite long as there isn't an end to the game unless a mistake is made or the game times out. **PASSED**
+
 ### Contact Me
 
 There are 4 fields that need to be entered by the user. Each field was tested to make sure the user entered data in that field. 
@@ -112,3 +135,14 @@ When the Send Request button is pressed and all fields have been filled in nothi
 
 There are links to social pages within the footer. Each link was clicked to make sure it loads up a new page with the correct social page. 
 
+### Jasmine Testing 
+
+I did look into Jasmine testing but realised it is mainly useful when a function or the DOM returns a value. 
+
+This particular project did not give me the opportunity to use Jasmine testing as the functions simply ran without returning a value or called another function. 
+
+## Deployment 
+
+This project was deployed through GitHub Pages. Anyone can download the project or clone it from GitHub. 
+
+The live website can be found [here](https://darrenmessenger.github.io/simon-game/).
