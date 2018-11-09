@@ -1,6 +1,6 @@
 # Simon Game
 
-<img src="assets/images/Simon_Game_Screen_Print.png">
+<img src="assets/images/Screen Print.png">
 
 ## Reason For Project
 
