@@ -17,7 +17,20 @@ The live website can be found [here](https://darrenmessenger.github.io/simon-gam
 
 ### User Stories
 
-
+- If I look at the game when the page loads I will see an information 'banner' telling me to press the 'Start/Reset' button to begin.  
+- I press a coloured panel and I hear a sound that represents the panel and the panel that I pressed vibrates.
+- I press the 'Start/Reset' button and I can hear and see a start up sequence. 
+- After the start up sequence has finished a random panel makes a sound and vibrates. 
+- If I correctly copy the random panel sequence that the game displayed then I will see an information message with a random statement and another random panel will be added to the sequence. 
+- I can see a countdown timer that starts as soon as the random panel or panels are displayed. 
+- If I do not press a panel before the countdown gets to zero then the game is finished and I will hear a buzzer and an information message stating which round I achieved. 
+- If I copy the random sequence correcly each time the counter will increase showing me which round I am on. 
+- I can see at any time which round I am on by looking at the counter. 
+- If I copy the random sequence incorrectly then I will hear a buzzer and an information message stating which round I achieved. 
+- If I hear the buzzer that means the game has ended and I will see a flashing information message telling me to press the 'Start/Reset' button.
+- If I want to restart the game at any time then I can press the 'Start/Reset' button. 
+- If I keep copying the sequence of random panels correctly the sequence will increase by one each round.
+- If I keep copying the sequence of random panels correctly the sequence could get quite long as there isn't an end to the game unless a mistake is made or the game times out. 
 
 ## Features
 
@@ -52,9 +65,16 @@ When the links are clicked then a new page is opened up showing the social media
 
 ## Technologies Used
 
-[Bootstrap](https://getbootstrap.com/), [JQuery](https://jquery.com/), [EmailJS](http://www.emailjs.com/), [Google Fonts](https://fonts.google.com/), 
-[FontAwesome](https://fontawesome.com/), [Animate.css](https://daneden.github.io/animate.css/), [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial),
-have all been used during the coding of this project. 
+The following technologies have all been used during the coding of this project:
+
+- [Bootstrap](https://getbootstrap.com/) 
+- [JQuery](https://jquery.com/) 
+- [EmailJS](http://www.emailjs.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [FontAwesome](https://fontawesome.com/)
+- [Animate.css](https://daneden.github.io/animate.css/)
+- [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial),
+
 
 ## Testing
 Every aspect of the site has been tested as described below.
