@@ -13,6 +13,8 @@ var blueSound = new Audio("assets/audio/blueSound.mp3");
 var yellowSound = new Audio("assets/audio/yellowSound.mp3");
 var wrongMoveSound = new Audio("assets/audio/Buzzer-SoundBible.com-188422102.mp3");
 var InformationString = ``;
+var countdown;
+var countdown_number;
 
 /*Common Functions*/
 
@@ -55,6 +57,7 @@ function playerClicked(id) {
   var elementColour = "#" + id;
   playSound(elementColour);
   playerGame.push(elementColour);
+  countdown_clear();
   checkPlayerClick();
 }
 
@@ -107,7 +110,6 @@ function resetGamePressed() {
   information("Let's play. Copy the random colours");
   wakeUp();
   resetGame();
-  countdown_init();
 
   var myTimer = setTimeout(waitForNextRound, 4000);
 
@@ -163,6 +165,8 @@ function displayGameMoves() {
     if (i >= simonGame.length) {
       clearInterval(moves);
     }
+    countdown_clear(); /*Start the timer only after the next round has been displayed*/
+    countdown_init(11); /*Allow the user 10 seconds to click a button*/
   }, 800)
   clearPlayerGame();
 }
@@ -183,6 +187,7 @@ function clearPlayerGame() {
   playerGame = [];
 }
 
+/*Update the information 'banner'*/
 function information(infoDescription) {
   var animationName = 'animated tada';
   var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
@@ -212,11 +217,8 @@ function playSound(name) {
 
 /*Timer Function*/
 
-var countdown;
-var countdown_number;
-
-function countdown_init() {
-  countdown_number = 300; /*Set the timer to 5 mins*/
+function countdown_init(time_interval) {
+  countdown_number = time_interval
   countdown = 0;
   countdown_trigger();
 }
@@ -224,10 +226,10 @@ function countdown_init() {
 function countdown_trigger() {
   if (countdown_number > 0) {
     countdown_number--;
-    var minutes = Math.floor(countdown_number / 60); 
-    var seconds = countdown_number % 60; 
+    var minutes = Math.floor(countdown_number / 60);
+    var seconds = countdown_number % 60;
 
-    timer.innerHTML = "Time remaining: " + minutes + " minutes: " + seconds + " seconds";
+    timer.innerHTML = "Time remaining: " + minutes + " minutes " + seconds + " seconds";
     if (countdown_number > 0) {
       countdown = setTimeout('countdown_trigger()', 1000);
     }
@@ -235,7 +237,7 @@ function countdown_trigger() {
       /*Times up!!!!*/
       clearTimeout(myTimerWaitForInformation);
       var tmpInformationString = `Times Up! You made it to round ${roundNumber}. Try again. Press Start/Reset...`;
-      wrongMoveSound.play();
+      wrongMoveSound.play(); /*The player took too long to press a button during the game*/
       information(tmpInformationString);
       InformationString = tmpInformationString;
       myTimerWaitForInformation = setInterval(waitForInformation, 3000);
