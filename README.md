@@ -55,6 +55,10 @@ There is also a 'Read more...' with a link to Wikipedia if the user wants to rea
 #### Simon Game:
 This section utilises the bootstrap grid layout. 
 
+The game itself uses has different colour panels withing a large circle to imitate the game. There is a counter and a 'Start/Reset' button within the circle as well. 
+
+When a user clicks on a button or a panel the relevant function is called from the script.js file. There are a number of functions that deal with every aspect of the game. 
+
 #### Contact Me:
 This section utilises the bootstrap grid layout. There is a form to allow the user to enter details so that they may contact me if they like the game and want to give me a project or want to discuss something.
 All the details are very clear using descriptive placeholders. 
@@ -75,7 +79,7 @@ The following technologies have all been used during the coding of this project:
 - [JQuery](https://jquery.com/). This was used for the gaming functionality. 
 - [SASS](https://sass-lang.com/guide) I have used SCSS files with Preprocessing, Partials, Variables, Imports, Mixins, Extend, and Operators. 
 - [EmailJS](http://www.emailjs.com/) When the contact form is submitted I utilised emailJS to send me an actual email to my email address. 
-- [Google Fonts](https://fonts.google.com/) I chose the 'Nunito' font as I suited my project. 
+- [Google Fonts](https://fonts.google.com/) I chose the 'Nunito' font as it suited my project. 
 - [FontAwesome](https://fontawesome.com/) I used FontAwesome for the icons shown in the footer for the social links. 
 - [Animate.css](https://daneden.github.io/animate.css/) This was useful to imitate a 'vibrating' panel on the game. 
 - [Google Maps API](https://developers.google.com/maps/documentation/javascript/tutorial) This showed where I am based. 
@@ -85,51 +89,61 @@ The following technologies have all been used during the coding of this project:
 
 Every aspect of the site has been tested as described below.
 
+### Responsive Testing
+I utilised Bootstrap so that the whole site would be respsive on different platforms. 
+
+On a large screen the full navigation menu is displayed and the game appears next to the about section. The map of my location appears next to the contact form. 
+
+On a medium screen the full navigation menu is displayed but the game appears underneath the about section. The map also appears underneath the contact form. 
+
+On a small screen the menu items disappear and a bootstrap burger button appears which, when clicked, displays the menu items on their own row. If clicked again the menu will disappear again.  
+The game is displayed beneath the about section and the map appears beneath the contact form as it did on a medium screen. 
+
 ### Header and Navigation
 
 On the top of the page there is a navigation bar with 4 menu items. Each menu item has been tested on each page to ensure it takes the user to the correct area of the page. 
+The page scrolled smoothly when a navigation link is clicked as it should. 
 When each menu item is hovered over there is a transition to a different colour so that the user can see which menu item is being hovered over. 
-
-On a small screen the menu items disappear and a bootstrap burger button appears which, when clicked, displays the menu items on their own row. If clicked again the menu will disappear again.  
-The page should scroll smoothly when a navigation link is clicked.
-
-### Main Page
-
-The whole web page was checked to make sure that when on a small, medium or large screen the page reacts responsively. 
-The burger button appears on a small display and the game should be shown below the about section on a medium and small display, but next to it on a large display. 
-The map also appears below the contact form on medium and small displays but next to it on large displays. 
 
 ### About
 
-The 'Read more...' link was checked to make sure a new page was opened with the Wikipedia page. 
+The 'Read more...' link was checked to make sure a new page was opened with the Wikipedia page. The about section appeared in the correct place on the page when tested responsively. 
 
 ### Simon Game
+
+The game appeared in the correct place on the page when tested responsively. 
 
 The game has been tested extensively by both me and my family!.
 
 I went through each of the User Stories to make sure that they worked as expected. 
 
-- If I look at the game when the page loads I will see an information 'banner' telling me to press the 'Start/Reset' button to begin. **PASSED**
-- I press a coloured panel and I hear a sound that represents the panel and the panel that I pressed vibrates. **PASSED**
-- I press the 'Start/Reset' button and I can hear and see a start up sequence. **PASSED**
-- After the start up sequence has finished a random panel makes a sound and vibrates. **PASSED**
-- If I correctly copy the random panel sequence that the game displayed then I will see an information message with a random statement and another random panel will be added to the sequence. **PASSED**
-- I can see a countdown timer that starts as soon as the random panel or panels are displayed. **PASSED**
-- If I do not press a panel before the countdown gets to zero then the game is finished and I will hear a buzzer and an information message stating which round I achieved. **PASSED**
-- If I copy the random sequence correcly each time the counter will increase showing me which round I am on. **PASSED**
-- I can see at any time which round I am on by looking at the counter. **PASSED**
-- If I copy the random sequence incorrectly then I will hear a buzzer and an information message stating which round I achieved. **PASSED**
-- If I hear the buzzer that means the game has ended and I will see a flashing information message telling me to press the 'Start/Reset' button. **PASSED**
-- If I want to restart the game at any time then I can press the 'Start/Reset' button. **PASSED**
-- If I keep copying the sequence of random panels correctly the sequence will increase by one each round. **PASSED**
-- If I keep copying the sequence of random panels correctly the sequence could get quite long as there isn't an end to the game unless a mistake is made or the game times out. **PASSED**
+| User Story | Result |
+| ---------- | ------ |
+| If I look at the game when the page loads I will see an information 'banner' telling me to press the 'Start/Reset' button to begin. | **PASSED** |
+| I press a coloured panel and I hear a sound that represents the panel and the panel that I pressed vibrates. | **PASSED** |
+| I press the 'Start/Reset' button and I can hear and see a start up sequence. | **PASSED** |
+| After the start up sequence has finished a random panel makes a sound and vibrates. | **PASSED** |
+| If I correctly copy the random panel sequence that the game displayed then I will see an information message with a random statement and another random panel will be added to the sequence. | **PASSED** |
+| I can see a countdown timer that starts as soon as the random panel or panels are displayed. | **PASSED** |
+| If I do not press a panel before the countdown gets to zero then the game is finished and I will hear a buzzer and an information message stating which round I achieved. | **PASSED** |
+| If I copy the random sequence correcly each time the counter will increase showing me which round I am on. | **PASSED** |
+| I can see at any time which round I am on by looking at the counter. | **PASSED** |
+| If I copy the random sequence incorrectly then I will hear a buzzer and an information message stating which round I achieved. | **PASSED** |
+| If I hear the buzzer that means the game has ended and I will see a flashing information message telling me to press the 'Start/Reset' button. | **PASSED** |
+| If I want to restart the game at any time then I can press the 'Start/Reset' button. | **PASSED** |
+| If I keep copying the sequence of random panels correctly the sequence will increase by one each round. | **PASSED** |
+| If I keep copying the sequence of random panels correctly the sequence could get quite long as there isn't an end to the game unless a mistake is made or the game times out. | **PASSED** |
 
 ### Contact Me
 
-There are 4 fields that need to be entered by the user. Each field was tested to make sure the user entered data in that field. 
-If the user didn't enter data in each field then the submit button won't submit the data because an error message appears. 
-When the Send Request button is pressed and all fields have been filled in nothing will happen (apart from the fields being blanked out) as that part of the course hasn't been completed yet. 
+The contact section and the map appeared in the correct place on the page when tested responsively. 
 
+There are 3 fields that need to be entered by the user. Each field was tested to make sure the user entered data in that field. 
+If the user didn't enter data in each field then the submit button won't submit the data because an error message appears. 
+When all the fields have been entered and the Send Request button is pressed I made sure an email is received in my inbox. 
+There was also a message box that appeared when emailJS sent the email successfully. If it wasn't sent successfully then an error message would be displayed. 
+
+The map appeared as it should and the marker pinpointed my location. When the marker was clicked it zoomed into my location so that it showed a little more detail. 
 
 ### Footer
 
