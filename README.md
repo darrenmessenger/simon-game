@@ -160,3 +160,14 @@ This particular project did not give me the opportunity to use Jasmine testing a
 This project was deployed through GitHub Pages. Anyone can download the project or clone it from GitHub. 
 
 The live website can be found [here](https://darrenmessenger.github.io/simon-game/).
+
+## Credits
+
+### Content
+
+- The text from the about section was received from [Wikipedia](https://en.wikipedia.org/wiki/Simon_(game)).
+
+## Media
+
+- The background image was downloaded from [ShutterStock](https://www.shutterstock.com/).
+- The audio sounds (beeps and failure sounds) were found on [Sound Jay](https://www.soundjay.com/).
