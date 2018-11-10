@@ -11,7 +11,7 @@ var greenSound = new Audio("assets/audio/greenSound.mp3");
 var redSound = new Audio("assets/audio/redSound.mp3");
 var blueSound = new Audio("assets/audio/blueSound.mp3");
 var yellowSound = new Audio("assets/audio/yellowSound.mp3");
-var wrongMoveSound = new Audio("assets/audio/Buzzer-SoundBible.com-188422102.mp3");
+var wrongMoveSound = new Audio("assets/audio/fail-buzzer-03.mp3");
 var InformationString = ``;
 var countdown;
 var countdown_number;
