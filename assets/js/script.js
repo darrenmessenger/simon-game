@@ -20,14 +20,14 @@ var countdown_number;
 
 /*Common Functions*/
 
-(function () {
+(function() {
   /*Initialise emailjs*/
   emailjs.init("user_gqsmetIRnz8HskVK7nXeh");
-})( );
+})();
 
 /*When a navigation link is clicked the page will scroll smoothly*/
 // Add smooth scrolling to all links
-$(document).ready(function(){
+$(document).ready(function() {
   $("a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
@@ -59,7 +59,9 @@ function playerClicked(id) {
   var elementColour = "#" + id;
   playSound(elementColour);
   playerGame.push(elementColour);
-  countdown_clear();
+  countdown_clear(); /*Start the timer */
+  countdown_init(11); /*Allow the user 10 seconds to click a button*/
+
   checkPlayerClick();
 }
 
@@ -83,6 +85,7 @@ function checkPlayerClick() {
       if (roundNumber != 1) {
         information(motivation[(Math.floor(Math.random() * 7))]);
       }
+      countdown_clear(); /*Clear the timer */
       var myTimer = setTimeout(waitForNextRound, 2000);
 
       function waitForNextRound() {
@@ -108,6 +111,7 @@ function informationFlash(infoDescription) {
 
 /*When the start/reset button is pressed this function is called*/
 function resetGamePressed() {
+  $("#game").addClass('disabled');
   clearTimeout(myTimerWaitForInformation);
   information("Let's play. Copy the random colours");
   wakeUp();
@@ -117,6 +121,7 @@ function resetGamePressed() {
 
   function waitForNextRound() {
     roundNumber = 0;
+    $("#game").removeClass('disabled');
     nextRound();
   }
 }
@@ -154,6 +159,7 @@ function nextRound() {
 
 /*Pick a random colour from the array*/
 function generateMove() {
+  $("#game").addClass('disabled');
   simonGame.push(simonColours[(Math.floor(Math.random() * 4))]);
   displayGameMoves();
 }
@@ -166,6 +172,7 @@ function displayGameMoves() {
     i++;
     if (i >= simonGame.length) {
       clearInterval(moves);
+      $("#game").removeClass('disabled');
     }
     countdown_clear(); /*Start the timer only after the next round has been displayed*/
     countdown_init(11); /*Allow the user 10 seconds to click a button*/
