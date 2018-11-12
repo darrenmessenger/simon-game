@@ -87,7 +87,10 @@ The following technologies have all been used during the coding of this project:
 
 ## Testing
 
-Every aspect of the site has been tested as described below.
+The HTML and CSS code used on this project has been tested using The [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+and The [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input).
+
+Every other aspect of the site has been tested as described below.
 
 ### Responsive Testing
 I utilised Bootstrap so that the whole site would be respsive on different platforms. 
@@ -153,7 +156,7 @@ There are links to social pages within the footer. Each link was clicked to make
 
 I did look into Jasmine testing but realised it is mainly useful when a function or the DOM returns a value. 
 
-This particular project did not give me the opportunity to use Jasmine testing as the functions simply ran without returning a value or called another function. 
+This project did not give me the opportunity to use Jasmine testing as the functions simply ran without returning a value or called another function. 
 
 ## Deployment 
 

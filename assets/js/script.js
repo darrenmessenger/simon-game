@@ -1,10 +1,12 @@
 /***************************Variables*******************************/
+/*jslint browser: true*/
+/*global $, jQuery*/
 
 var roundNumber = 0;
 var simonGame = [];
 var simonColours = ['#green', '#red', '#blue', '#yellow'];
 var simonColoursWakeUp = ['#yellow', '#green', '#red', '#blue', '#red', '#green', '#yellow', '#blue'];
-var motivation = ['Nice move!', 'Great move!', 'You are a genius!', 'Good stuff!', 'What a memory!', 'Perfect!', 'Excellent!']
+var motivation = ['Nice move!', 'Great move!', 'You are a genius!', 'Good stuff!', 'What a memory!', 'Perfect!', 'Excellent!'];
 var playerGame = [];
 var myTimerWaitForInformation = 0;
 var greenSound = new Audio("assets/audio/greenSound.mp3");
@@ -12,20 +14,20 @@ var redSound = new Audio("assets/audio/redSound.mp3");
 var blueSound = new Audio("assets/audio/blueSound.mp3");
 var yellowSound = new Audio("assets/audio/yellowSound.mp3");
 var wrongMoveSound = new Audio("assets/audio/fail-buzzer-03.mp3");
-var InformationString = ``;
+var InformationString = "";
 var countdown;
 var countdown_number;
 
 /*Common Functions*/
 
-(function() {
+(function () {
   /*Initialise emailjs*/
   emailjs.init("user_gqsmetIRnz8HskVK7nXeh");
-})();
+})( );
 
 /*When a navigation link is clicked the page will scroll smoothly*/
 // Add smooth scrolling to all links
-$(document).ready(function() {
+$(document).ready(function(){
   $("a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
