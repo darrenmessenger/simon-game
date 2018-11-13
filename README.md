@@ -93,7 +93,7 @@ and The [W3C Markup Validation Service](https://validator.w3.org/#validate_by_in
 Every other aspect of the site has been tested as described below.
 
 ### Responsive Testing
-I utilised Bootstrap so that the whole site would be respsive on different platforms. 
+I utilised Bootstrap so that the whole site would be resposive on different platforms. 
 
 On a large screen the full navigation menu is displayed and the game appears next to the about section. The map of my location appears next to the contact form. 
 
