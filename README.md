@@ -93,7 +93,7 @@ and The [W3C Markup Validation Service](https://validator.w3.org/#validate_by_in
 Every other aspect of the site has been tested as described below.
 
 ### Responsive Testing
-I utilised Bootstrap so that the whole site would be resposive on different platforms. 
+I utilised Bootstrap so that the whole site would be responsive on different platforms. 
 
 On a large screen the full navigation menu is displayed and the game appears next to the about section. The map of my location appears next to the contact form. 
 
@@ -160,7 +160,11 @@ This project did not give me the opportunity to use Jasmine testing as the funct
 
 ## Deployment 
 
-This project was deployed through GitHub Pages. Anyone can download the project or clone it from GitHub [here](https://github.com/darrenmessenger/simon-game) 
+This project was deployed through GitHub Pages. The process was simple and involved going to my repository for this project and clicking on the settings icon. 
+
+I scrolled down to the GitHub Pages section and picked 'Master Branch' as the source, and saved it. The URL of the published site was then displayed in that same section. 
+
+Anyone can download the project or clone it from GitHub [here](https://github.com/darrenmessenger/simon-game) 
 
 The live website can be found [here](https://darrenmessenger.github.io/simon-game/).
 
