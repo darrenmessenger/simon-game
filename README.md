@@ -160,11 +160,19 @@ This project did not give me the opportunity to use Jasmine testing as the funct
 
 ## Deployment 
 
-This project was deployed through GitHub Pages. Anyone can download the project or clone it from GitHub. 
+This project was deployed through GitHub Pages. Anyone can download the project or clone it from GitHub [here](https://github.com/darrenmessenger/simon-game) 
 
 The live website can be found [here](https://darrenmessenger.github.io/simon-game/).
 
+### Cloning
+
+If you wish to clone this project then you can click on the green 'Clone or download' button on [this](https://github.com/darrenmessenger/simon-game) page, and then download the .zip file. 
+
+Unzip the file into the directory you prefer on your computer or cloud drive and then import it into your favourite IDE. 
+
 ## Credits
+
+I would like to thank all of the Code Institute students that helped throughout this project on Slack. 
 
 ### Content
 
