@@ -30,7 +30,9 @@ The live website can be found [here](https://darrenmessenger.github.io/simon-gam
 - If I hear the buzzer that means the game has ended and I will see a flashing information message telling me to press the 'Start/Reset' button.
 - If I want to restart the game at any time then I can press the 'Start/Reset' button. 
 - If I keep copying the sequence of random panels correctly the sequence will increase by one each round.
-- If I keep copying the sequence of random panels correctly the sequence could get quite long as there isn't an end to the game unless a mistake is made or the game times out. 
+- If I keep copying the sequence of random panels correctly the sequence could get quite long as there isn't an end to the game unless a mistake is made or the game times out.
+- If I beat the highest score then I want the display of the 'Highest Score' to be updated with my current score. 
+- If the Game is showing the next sequence of colours do not let the user press any panel until the sequence has finished. 
  
 ### Process
 
@@ -58,6 +60,8 @@ This section utilises the bootstrap grid layout.
 The game itself uses has different colour panels withing a large circle to imitate the game. There is a counter and a 'Start/Reset' button within the circle as well. 
 
 When a user clicks on a button or a panel the relevant function is called from the script.js file. There are a number of functions that deal with every aspect of the game. 
+
+Each of the User Stories were looked at to make sure that the game functioned correctly. The design and functionality of the game was based on the User Stories. 
 
 #### Contact Me:
 This section utilises the bootstrap grid layout. There is a form to allow the user to enter details so that they may contact me if they like the game and want to give me a project or want to discuss something.
@@ -136,6 +140,8 @@ I went through each of the User Stories to make sure that they worked as expecte
 | If I want to restart the game at any time then I can press the 'Start/Reset' button. | **PASSED** |
 | If I keep copying the sequence of random panels correctly the sequence will increase by one each round. | **PASSED** |
 | If I keep copying the sequence of random panels correctly the sequence could get quite long as there isn't an end to the game unless a mistake is made or the game times out. | **PASSED** |
+| If I beat the highest score then I want the display of the 'Highest Score' to be updated with my current score. | **PASSED**|
+| If the Game is showing the next sequence of colours do not let the user press any panel until the sequence has finished. | **PASSED** |
 
 ### Contact Me
 

@@ -88,7 +88,7 @@
 #roundNumber {
     @extend .game-row;
     text-align: center;
-    margin: 0px 110px 0px 0px;
+    margin: 0px 10px 0px 0px;
     padding-right: 5px;
     width: 25px;
     animation-duration: 0.4s;
@@ -136,21 +136,23 @@
     animation-duration: 2s;
     display: inline-block;
     color: white;
-    background: rgba(255, 0, 0, 0.9);
+    /*background: rgba(255, 0, 0, 0.9);*/
+    background: transparent;
     padding: 0.3em 0.5em 0.3em 0.5em;
     text-align: center;
     margin-top: 50px;
+    height: 80px;
     font: {
         weight: 500;
-        size: 1.2em;
+        size: 1.4em;
     }
     ;
-    border: {
+   /* border: {
         style: solid;
         width: 2px;
         color: white;
         radius: 20px;
-    }
+    }*/
     ;
 }
 
@@ -166,4 +168,10 @@
 
 .disabled {
     pointer-events: none;
+}
+
+#hi_score {
+    font-size: 12px;
+    color: white;
+    margin: 0px 10px 0px 0px;
 }

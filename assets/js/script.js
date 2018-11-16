@@ -25,9 +25,20 @@ var countdown_number;
   emailjs.init("user_gqsmetIRnz8HskVK7nXeh");
 })();
 
-/*When a navigation link is clicked the page will scroll smoothly*/
-// Add smooth scrolling to all links
 $(document).ready(function() {
+
+  /*Update the highest score*/
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.highscore) {
+      document.getElementById("hi_score").innerHTML = "Highest Score: " + localStorage.highscore;
+    }
+    else {
+      localStorage.highscore = 1;
+    }
+  }
+
+  /*When a navigation link is clicked the page will scroll smoothly*/
+  /* Add smooth scrolling to all links*/
   $("a").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
@@ -85,8 +96,19 @@ function checkPlayerClick() {
       if (roundNumber != 1) {
         information(motivation[(Math.floor(Math.random() * 7))]);
       }
+      if (typeof(Storage) !== "undefined") {
+        if (localStorage.highscore) {
+          if (roundNumber > Number(localStorage.highscore)) {
+            localStorage.highscore = roundNumber;
+          }
+          document.getElementById("hi_score").innerHTML = "Highest Score: " + localStorage.highscore;
+        }
+        else {
+          localStorage.highscore = 1;
+        }
+      }
       countdown_clear(); /*Clear the timer */
-      var myTimer = setTimeout(waitForNextRound, 2000);
+      setTimeout(waitForNextRound, 2000);
 
       function waitForNextRound() {
         nextRound();
@@ -109,6 +131,12 @@ function informationFlash(infoDescription) {
   })
 }
 
+function waitForNextRound() {
+  roundNumber = 0;
+  $("#game").removeClass('disabled');
+  nextRound();
+}
+
 /*When the start/reset button is pressed this function is called*/
 function resetGamePressed() {
   $("#game").addClass('disabled');
@@ -117,13 +145,7 @@ function resetGamePressed() {
   wakeUp();
   resetGame();
 
-  var myTimer = setTimeout(waitForNextRound, 4000);
-
-  function waitForNextRound() {
-    roundNumber = 0;
-    $("#game").removeClass('disabled');
-    nextRound();
-  }
+  setTimeout(waitForNextRound, 4000);
 }
 
 /*Reset the game*/
@@ -238,7 +260,7 @@ function countdown_trigger() {
     var minutes = Math.floor(countdown_number / 60);
     var seconds = countdown_number % 60;
 
-    timer.innerHTML = "Time remaining: " + minutes + " minutes " + seconds + " seconds";
+    timer.innerHTML = "Time remaining: " + seconds + " seconds";
     if (countdown_number > 0) {
       countdown = setTimeout('countdown_trigger()', 1000);
     }
