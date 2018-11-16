@@ -17,6 +17,8 @@ var wrongMoveSound = new Audio("assets/audio/fail-buzzer-03.mp3");
 var InformationString = "";
 var countdown;
 var countdown_number;
+var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
+var animationNameclickButton = 'animated shake clickButton';
 
 /*Common Functions*/
 
@@ -124,7 +126,6 @@ function waitForInformation() {
 
 function informationFlash(infoDescription) {
   var animationName = 'animated flash';
-  var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
 
   $('#information').html(infoDescription).addClass(animationName).one(animationEnd, function() {
     $(this).removeClass(animationName);
@@ -205,7 +206,6 @@ function displayGameMoves() {
 /*Display the generated moves*/
 function playGame(elementColour) {
   var animationName = 'animated shake clickButton';
-  var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
 
   playSound(elementColour);
   $(elementColour).addClass(animationName).one(animationEnd, function() {
@@ -221,7 +221,6 @@ function clearPlayerGame() {
 /*Update the information 'banner'*/
 function information(infoDescription) {
   var animationName = 'animated tada';
-  var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
 
   $('#information').html(infoDescription).addClass(animationName).one(animationEnd, function() {
     $(this).removeClass(animationName);
@@ -285,36 +284,28 @@ function countdown_clear() {
 
 /*Shake the red button when it is pressed*/
 $('#red').click(function() {
-  var animationName = 'animated shake clickButton';
-  var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-  $('#red').addClass(animationName).one(animationEnd, function() {
-    $(this).removeClass(animationName);
+  $('#red').addClass(animationNameclickButton).one(animationEnd, function() {
+    $(this).removeClass(animationNameclickButton);
   })
 })
 
 /*Shake the yellow button when it is pressed*/
 $('#yellow').click(function() {
-  var animationName = 'animated shake clickButton';
-  var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-  $('#yellow').addClass(animationName).one(animationEnd, function() {
-    $(this).removeClass(animationName);
+  $('#yellow').addClass(animationNameclickButton).one(animationEnd, function() {
+    $(this).removeClass(animationNameclickButton);
   })
 })
 
 /*Shake the blue button when it is pressed*/
 $('#blue').click(function() {
-  var animationName = 'animated shake clickButton';
-  var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-  $('#blue').addClass(animationName).one(animationEnd, function() {
-    $(this).removeClass(animationName);
+  $('#blue').addClass(animationNameclickButton).one(animationEnd, function() {
+    $(this).removeClass(animationNameclickButton);
   })
 })
 
 /*Shake the green button when it is pressed*/
 $('#green').click(function() {
-  var animationName = 'animated shake clickButton';
-  var animationEnd = 'animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd';
-  $('#green').addClass(animationName).one(animationEnd, function() {
-    $(this).removeClass(animationName);
+  $('#green').addClass(animationNameclickButton).one(animationEnd, function() {
+    $(this).removeClass(animationNameclickButton);
   })
 })
