@@ -23,12 +23,6 @@ body {
 .main-container {
   margin-bottom: 50px; }
 
-.btn {
-  width: 200px;
-  height: 100px;
-  border: 1px solid #e84610;
-  color: #fff; }
-
 /*mixin that can be used to create different colour overlays*/
 /*Use the mixin to create coloured overlays*/
 .opaque-overlay-red {
@@ -157,14 +151,6 @@ body {
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: transparent; }
 
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top; }
-
-.navbar .navbar-collapse {
-  text-align: center; }
-
 /*******************************************ABOUT DETAILS*******************************************/
 /*Features of about*/
 #about {
@@ -255,7 +241,7 @@ body {
   animation-duration: 0.4s;
   color: white;
   font-weight: 400;
-  font-size: 30px; }
+  font-size: 25px; }
 
 /*Features of the main circle containing the game. */
 .large-circle {
@@ -290,13 +276,7 @@ body {
   margin-top: 50px;
   height: 80px;
   font-weight: 500;
-  font-size: 1.4em;
-  /* border: {
-       style: solid;
-       width: 2px;
-       color: white;
-       radius: 20px;
-   }*/ }
+  font-size: 1.4em; }
 
 /*Size and colour of the game timer*/
 #timer {
@@ -356,6 +336,9 @@ body {
   margin-left: 0px;
   height: 450px;
   width: 100%; }
+
+.text_center {
+  margin: 0 auto; }
 
 /*******************************************FOOTER DETAILS*******************************************/
 /*Features of the main footer*/

@@ -94,6 +94,8 @@ The following technologies have all been used during the coding of this project:
 The HTML and CSS code used on this project has been tested using The [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) 
 and The [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input).
 
+The project has been tested on Google Chrome (desktop and mobile versions), Mozilla Firefox and Microsoft Edge. 
+
 Every other aspect of the site has been tested as described below.
 
 ### Responsive Testing
