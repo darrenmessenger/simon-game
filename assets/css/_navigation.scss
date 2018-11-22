@@ -78,3 +78,13 @@
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: transparent;
 }
+
+/*Make the menu appear in the middle when collapsed*/
+
+.navbar-nav {
+  text-align: center;
+  position: relative;
+}
+
+
+
