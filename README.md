@@ -61,6 +61,8 @@ The game itself uses has different colour panels withing a large circle to imita
 
 When a user clicks on a button or a panel the relevant function is called from the script.js file. There are a number of functions that deal with every aspect of the game. 
 
+The game utilises Animate.css which creates CSS animations. I used it to create a 'vibrating' effect when each button is clicked. 
+
 Each of the User Stories were looked at to make sure that the game functioned correctly. The design and functionality of the game was based on the User Stories. 
 
 #### Contact Me:
